@@ -1,0 +1,33 @@
+.card-info{
+    @include flex(row);
+    padding: 20px;
+    gap: 20px;
+
+    @include mobile {
+       display: flex;
+       flex-direction: column;
+    }
+    &__section{
+        
+      &__icon{
+        @include different-icon;
+       }
+      &__button{
+        white-space: nowrap;
+        width: 119px;
+        height: 39px;
+        &-wrapper{
+            @include button;
+            background-color: $green;
+          } 
+      } 
+      // DECLARED IN FONTS FILE
+      // &__h2{
+      //   color: $black;
+      // }
+      // &__p{
+      //   color: $black;
+      // }
+ }
+}
+

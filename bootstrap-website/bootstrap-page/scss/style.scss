@@ -1,0 +1,20 @@
+@import "base/global-vars.scss";
+@import "mixins/mixin.scss";
+
+body{
+    background-color: $light-gray;
+}
+
+// .main-class{
+//     max-width: 1440px;
+//     width: 100%;
+//     margin: 0 auto;
+// }
+
+@import "layout/navbar.scss";
+@import "layout/carousel.scss";
+@import "layout/card1.scss";
+@import "layout/accordion.scss";
+@import "layout/card2.scss";
+
+@import "layout/footer.scss";

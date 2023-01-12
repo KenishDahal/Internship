@@ -1,0 +1,20 @@
+.main-navbar-cont{
+    padding: 35px 0;
+    .navbar{
+        &-brand{
+            width: 8.75rem;
+            height: 2.25rem;
+            padding: 0;
+        }
+        ul{
+            gap: 32px;
+            .toogle-menu{
+                gap: 8px;
+                img{
+                     width: 40px;
+                     height: 2px;   
+            }
+        }
+    }
+}
+}

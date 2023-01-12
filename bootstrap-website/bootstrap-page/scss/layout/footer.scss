@@ -1,0 +1,53 @@
+footer{
+    background-color: $light--dark;
+    margin-top: 40px;
+   min-width: 100%;
+   ul{
+    gap: 30px;
+    font-size:15px;
+    color:$beige--light;
+    @include devices (tablet){
+        gap: 50px;
+    }
+    @include devices (mobile){
+        gap: 10px;
+    }
+   }
+    .left-side{
+        @include devices (tablet){
+        img{
+            //  width: 100%;
+            @include devices (tablet){
+                height: 100px;
+                font-size: 10px;
+                text-align: center;
+            }
+        }
+        }
+       
+    }
+    .card{
+        height: 100%;
+        .nav-link1{
+            border-bottom: 2px solid $button--orange;
+            width: 3.5rem;
+        }
+        .nav-link2{
+            border-bottom: 2px solid $button--orange ;
+            width: 90px;
+        }
+    }
+    
+    .footer--mark{
+        margin-inline: 20px;
+        img{
+            height: 10px;
+        }
+        .social-media{
+
+        }
+        .pagevamp{
+            color: $full-white;
+        }
+    }
+}

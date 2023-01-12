@@ -1,0 +1,162 @@
+:root {
+    --bg-color: white;
+    --danger-red:red;
+    --blue: #0000ff;
+    --fruit-orange:#fa9005;
+}
+
+.main-tooltip{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    padding: 15px 30px;
+    margin: 30px 0;
+    width: 400px;
+    border: 1px solid black;
+    
+    /* border-style: ridge; */
+ }
+ .danger-icon{
+    width: 33.33%;
+    height: 30px;
+ }
+
+ 
+/* Cow icon */
+ .cow-icon{
+    background-image:url("cow-icon.svg");
+    height: 30px;
+    width: 33.33%;
+    background-repeat: no-repeat;
+ }
+
+ .tooltip{
+    width: 180px;
+    height: 20px; 
+    padding-top: 5px;
+ }
+
+ .danger-icon .t1{
+    /* background-color: var(--bg-color) ; */
+    /* width: 10.5rem;
+    height: 30px; */
+    color: var(--danger-red);
+    position: absolute;
+    top: 11%;
+    left: 0%;
+    right: 5%;
+    z-index: 1;
+    visibility: hidden;
+    box-shadow: 0 0 10px var(--danger-red);
+  } 
+
+.danger-icon .t1::after{
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 23%;
+      border-width: 5px;
+      border-style:solid;
+      border-color: transparent transparent var(--bg-color) transparent;
+  } 
+
+.danger-icon:hover .t1{
+      visibility: visible;
+  }
+
+  /* Finger print hover */
+  .fingerprint-icon{
+    width: 33.33%;
+    height: 30px;
+ }
+
+ .fingerprint-svg{
+    height: 20px;
+ }
+
+  .fingerprint-icon .t2{
+    color: var(--blue);
+    position: absolute;
+    bottom: 97%;
+    left: 25%;
+    right: 5%;
+    z-index: 1;
+    visibility: hidden;
+    box-shadow: 0 0 10px var(--blue);
+    width: 230px;
+    
+  } 
+
+.fingerprint-icon .t2::after{
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 20%;
+      border-width: 5px;
+      border-style:solid;
+      border-color: var(--bg-color) transparent transparent  transparent;
+  } 
+
+.fingerprint-icon:hover .t2{
+      visibility: visible;
+  }
+
+  /* Cow icon */
+  .cow-icon .t3{
+    /* background-color: var(--bg-color) ; */
+    /* width: 10.5rem;
+    height: 30px; */
+    color: var(--fruit-orange);
+    position: absolute;
+    top: 11%;
+    left: 40%;
+    right: 5%;
+    z-index: 1;
+    visibility: hidden;
+    box-shadow: 0 0 10px var(--fruit-orange);
+  } 
+
+.cow-icon .t3::after{
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      border-width: 5px;
+      border-style:solid;
+      border-color: transparent transparent var(--bg-color) transparent;
+  } 
+
+.cow-icon:hover .t3{
+      visibility: visible;
+  }
+
+.danger-icon:hover .icon{
+  color: var(--danger-red);
+}
+
+.fingerprint-svg:hover ,  
+.fingerprint-svg:focus{
+ filter: sepia(400%) hue-rotate(150deg) saturate(450%);
+}
+
+
+
+@media only screen and (min-width:600px){
+    .cow-icon .t3{
+    left: 40%;
+  } 
+  .fingerprint-icon .t2{
+   left: 18%;
+  } 
+}
+
+@media only screen and (min-width:800px){
+    .cow-icon .t3{
+    left: 18%;
+  } 
+  .fingerprint-icon .t2{
+    left: 10%;
+   } 
+}

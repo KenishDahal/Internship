@@ -1,0 +1,37 @@
+.faq--section{
+    margin-top: 86px;
+    border: 0;
+    &__2{
+        .accordion-item{
+            border-right: none;
+            border-left: none;
+            border-top: 0.0625rem solid $pencil--black ;
+            // border-bottom: 10px red;
+
+            .accordion-button {
+                padding-left: 0;
+                background-color: $light-gray;
+                &::after {
+                content: '\2212';
+                width: 30px;
+                font-size: 25px;
+                text-align: center;
+                right: 0.1rem;
+                top: 11px;
+                position: absolute;
+                }
+                &.collapsed::after{
+                    content: '\002B';
+                    background-image: url("");
+                  }
+                &:not(.collapsed) {
+                  &::after {
+                    background-image: url("");
+                  }
+                }
+              }
+        
+          }
+    }
+
+}

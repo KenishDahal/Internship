@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+:root{
+    --fade-black:#212121;
+    --white:#F6F6F6;
+    --par-black:#575757;
+    --tutu:#F9DBDB;
+    --orange:#E70606;
+}
+
+body{
+    margin: 0 128px;
+    padding: 0;
+    font-family:"Roboto";
+    background-color: var(--white);
+}
+
+button{
+    border: 0;
+}
+
+/* This is the upper segment part  */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    gap: 25px;
+    margin-top: 100px;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height */
+    text-align: center; 
+    color: var(--fade-black);    
+}
+
+.header_section{
+    text-align: center;
+}
+
+.header_section-heading{
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 63px;
+    text-align: center;
+    color:var(--fade-black);   
+}
+
+.cards{
+    display: flex;
+    gap: 32px;
+    text-align: center;
+    height: 100%;
+}
+
+.card-1 ,.card-2,.card-3,.card-4{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 10px 10px;
+    gap: 10px;
+    align-items: center;
+}
+
+.cards_paragraph{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+    text-align: center;
+}
+
+.cards_button{  
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 126px;
+    margin-top: 20px;
+    color: var(--white);
+}
+
+.card-1 .cards_button  {
+    background-color: #515151;     
+}
+
+.card-2 .cards_button  {
+    background-color: #0047FF;
+}
+
+.card-3 .cards_button  {
+    background-color: #40433C ;
+}
+
+.card-4 .cards_button  {
+    background-color:#B75F5F ;
+}
+
+/* Features css */
+.features{
+    margin-top: 100px;
+}
+
+h3{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    color: var(--fade-black);    
+}
+
+.button-feature{
+    height: 40px;
+    width: 126px;
+    color: white;
+    background-color:var(--orange);
+}
+/* Features css (Lower segment part */
+.features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+   
+}
+
+.feature-header{
+     text-align: center;  
+}
+
+.feature-header_h1{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 63px;
+    text-align: center;  
+    color: var(--orange);  
+}
+
+.feature-card{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content_paragraph{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    color: var(--par-black);    
+}
+
+ img{
+    border-radius: 50%;
+    border: 10px solid var(--tutu);
+    background-color: var(--tutu);
+}
+
+.card-img1{
+    padding: 0px 8px 8px 0 ;
+}
+
+.card-img2{
+    padding: 0px 0px 8px 8px ;
+}
+
+
+

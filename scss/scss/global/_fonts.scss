@@ -1,0 +1,20 @@
+button{
+    border: 0;
+}
+
+$fonts: (
+    h1 27.65px 700 120% $black,
+    h2 19.2px 700 180% $black,
+    body-1 16px 400 180% $black,
+    body-2 14px 400 180% $black,
+    body-1-bold 16px 700 180% $army-green
+);
+
+@each $tag, $size, $weight, $line-height, $color in $fonts {
+  .#{$tag}{
+      font-size: $size;
+      font-weight: $weight;
+      line-height: $line-height;
+      color: $color;
+  }
+} 

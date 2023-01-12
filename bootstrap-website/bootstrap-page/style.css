@@ -1,0 +1,230 @@
+@charset "UTF-8";
+body {
+  background-color: #D7D2CA;
+}
+
+.main-navbar-cont {
+  padding: 35px 0;
+}
+.main-navbar-cont .navbar-brand {
+  width: 8.75rem;
+  height: 2.25rem;
+  padding: 0;
+}
+.main-navbar-cont .navbar ul {
+  gap: 32px;
+}
+.main-navbar-cont .navbar ul .toogle-menu {
+  gap: 8px;
+}
+.main-navbar-cont .navbar ul .toogle-menu img {
+  width: 40px;
+  height: 2px;
+}
+
+.carousel-indicators [data-bs-target] {
+  border-radius: 50%;
+  border: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #D9D9D9;
+}
+
+.carousel-indicators li.active {
+  background-color: #DD7777;
+  margin-top: -3px;
+  height: 15px;
+  width: 15px;
+}
+
+.carousel-inner ::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.carousel-inner .carousel-item img {
+  filter: brightness(60%);
+}
+.carousel-inner .carousel-item .carousel-caption {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.carousel-inner .carousel-item .carousel-caption h5 {
+  font-weight: 700;
+  font-size: 51px;
+  line-height: 120%;
+  text-align: center;
+}
+@media only screen and (max-width: 992px) {
+  .carousel-inner .carousel-item .carousel-caption h5 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 100%;
+  }
+}
+.carousel-inner .carousel-item .carousel-caption p {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: center;
+  margin-top: 73px;
+}
+@media only screen and (max-width: 992px) {
+  .carousel-inner .carousel-item .carousel-caption p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+  }
+}
+
+.top--cards {
+  margin-top: 50px;
+}
+.top--cards__pics .card {
+  height: 100%;
+}
+
+.faq--section {
+  margin-top: 86px;
+  border: 0;
+}
+.faq--section__2 .accordion-item {
+  border-right: none;
+  border-left: none;
+  border-top: 0.0625rem solid #ABA299;
+}
+.faq--section__2 .accordion-item .accordion-button {
+  padding-left: 0;
+  background-color: #D7D2CA;
+}
+.faq--section__2 .accordion-item .accordion-button::after {
+  content: "−";
+  width: 30px;
+  font-size: 25px;
+  text-align: center;
+  right: 0.1rem;
+  top: 11px;
+  position: absolute;
+}
+.faq--section__2 .accordion-item .accordion-button.collapsed::after {
+  content: "+";
+  background-image: url("");
+}
+.faq--section__2 .accordion-item .accordion-button:not(.collapsed)::after {
+  background-image: url("");
+}
+
+.vision--card {
+  margin-top: 99px;
+}
+.vision--card h5 {
+  font-size: 80px;
+  line-height: 76px;
+  letter-spacing: -2%;
+  font-weight: 300;
+}
+@media only screen and (max-width: 992px) {
+  .vision--card h5 {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+@media only screen and (max-width: 522px) {
+  .vision--card h5 {
+    font-size: 15px;
+    line-height: 16px;
+  }
+}
+.vision--card p {
+  font-size: 17px;
+  line-height: 20.4px;
+  letter-spacing: -1%;
+  font-weight: 300;
+}
+@media only screen and (max-width: 992px) {
+  .vision--card p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+@media only screen and (max-width: 522px) {
+  .vision--card p {
+    font-size: 7px;
+    line-height: 8px;
+  }
+}
+.vision--card a {
+  width: 139px;
+  background-color: white;
+  height: 40px;
+  font-size: 16px;
+}
+@media only screen and (max-width: 992px) {
+  .vision--card a {
+    width: 69px;
+    height: 30px;
+    font-size: 6px;
+  }
+}
+.vision--card a img {
+  width: 10px;
+  height: 16px;
+  margin-left: 8px;
+  object-fit: contain;
+}
+
+footer {
+  background-color: #393939;
+  margin-top: 40px;
+  min-width: 100%;
+}
+footer ul {
+  gap: 30px;
+  font-size: 15px;
+  color: #EAE7DE;
+}
+@media only screen and (max-width: 992px) {
+  footer ul {
+    gap: 50px;
+  }
+}
+@media only screen and (max-width: 522px) {
+  footer ul {
+    gap: 10px;
+  }
+}
+@media only screen and (max-width: 992px) and (max-width: 992px) {
+  footer .left-side img {
+    height: 100px;
+    font-size: 10px;
+    text-align: center;
+  }
+}
+footer .card {
+  height: 100%;
+}
+footer .card .nav-link1 {
+  border-bottom: 2px solid #FF5C39;
+  width: 3.5rem;
+}
+footer .card .nav-link2 {
+  border-bottom: 2px solid #FF5C39;
+  width: 90px;
+}
+footer .footer--mark {
+  margin-inline: 20px;
+}
+footer .footer--mark img {
+  height: 10px;
+}
+footer .footer--mark .pagevamp {
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=style.css.map */

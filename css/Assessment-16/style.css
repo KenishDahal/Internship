@@ -1,0 +1,259 @@
+:root {
+    --ink-color: #5E607A;
+    --pane-padding: 5px 42px;
+    --orange: #F15E50;
+    --button-white:#FFEBCC ;
+  }
+
+.grid-container{
+    margin: 0 16px;
+    height:100%;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1.2fr 1.8fr 2.2fr  ;
+    gap: 16px;  
+}
+.grid-item{
+    z-index: -1;
+}
+
+.background-picture{
+    background-image: url("img-16.jpeg");
+   height:100%;
+}
+
+/* main-description class starts here */
+
+.flex-description{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-content: center;
+    height: 100%;
+}
+
+.heading-description{
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 40px; 
+    margin: 0;
+    width: 320px;
+    
+}
+.parbut-description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.par-description{
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 26px;
+   letter-spacing: 0.2em;
+   color: var(--ink-color);
+   margin: 0;
+   width: 520px;
+
+}
+.button-description{
+    margin: 0;
+    height: 3rem;
+    width: 11.3rem;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    background-color: var(--orange);
+    border: 0;
+    color:var(--button-white) ;
+}
+
+/* review container starts here */
+
+.flex-review{
+    display:flex ;
+    flex-direction: row;
+    gap: 20px;
+    height: 33%;
+    margin-bottom: 10px;
+}
+
+.review-numbers{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;     
+    color: #C5C6CE;
+
+}
+
+.flex-new-features{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    padding: 1.5rem;
+}
+
+.h2-new-features{ 
+     font-style: normal;
+     font-weight: 700;
+     font-size: 42px;
+     line-height: 40px;
+     color: #E9AB53;
+}
+.h3-new-features{ 
+     font-weight: 900;
+     font-size: 20px;
+     line-height: 40px;
+     color: #FFFDFA;
+}
+/* main-description
+review
+new-features */
+
+@media only screen and (min-width:721px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1000px 400px ;
+        grid-template-rows:  400px 182px 127px 200px; 
+        grid-template-areas: 
+        "background-picture  new-features "
+        "main-description new-features"
+        "review review ";
+        gap: 20px;
+    }
+    .background-picture{
+        grid-area: background-picture;
+        margin-top: 20px;
+    }
+    .new-features{
+        grid-area: new-features;
+        margin: 0;
+        display: flex;
+        flex-direction: row;     
+    }
+    .main-description{
+        grid-area: main-description;
+    }
+    .flex-description{
+        display: flex;
+        flex-direction: row;
+        justify-content:none;
+        gap:0;
+    } 
+
+     .heading-description{
+     padding: 20px;
+     line-height: 50px; 
+     margin: 0;
+     width: 420px;
+    }
+
+    .parbut-description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+    .par-description{
+        margin-top: 10px;
+    }
+    
+    .button-description{
+        height: 200px;
+        width: 120px;
+    }
+
+    .review{
+        grid-area: review;
+        display: flex;
+        flex-direction: row;
+        height: 250px;
+        width: 100%;
+    }
+    .review-img{
+        height:250px;
+    }
+    
+    
+
+
+    /* .flex-review{
+        display:flex ;
+        flex-direction: row;
+        margin-bottom: 10px;
+        
+    } */
+}
+ /* Naviagation Css starts here */
+ .full-nav-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+ }
+
+ .logo{
+   margin-left: 20px;
+ }
+ /* this is the  main nav with check box, hamburger and menu list */
+ .main-nav{
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+ }
+ /* this the menu list for "home" ,"new" , /... */
+.menu-list{
+   margin: 0 12px;
+}
+
+.menu-list a {
+   text-decoration: none;
+   color: black;
+   margin: 0 10px;
+   line-height: 70px;
+   clear: right ;
+}
+
+label{
+   margin: 0 30px 0 0 ;
+   font-size: 40px;
+   line-height: 70px;
+   display: none;
+   width: 26px;
+   float: right;
+}
+
+#toggle{
+   display: none;
+}
+
+@media only screen and (max-width:700px){
+   label{
+      display: block;
+      cursor: pointer;
+   }
+   .menu-list{
+      background-color: #FDF8EC;;
+     padding: 0;
+      text-align: left;
+      width: 400px;
+      height: 100vh;
+      display: none;
+   }
+   .menu-list a{
+      display: block;
+      margin: 0 20px;
+   }
+
+   #toggle:checked + .menu-list {
+      display: block;
+   }
+}
+

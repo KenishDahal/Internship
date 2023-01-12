@@ -1,0 +1,50 @@
+.vision--card{
+    margin-top: 99px;
+    h5{
+        font-size: 80px;
+        line-height: 76px;
+        letter-spacing: -2%;
+        font-weight: 300;
+        @include devices (tablet){
+            font-size: 40px;
+            line-height: 46px;
+        }
+        @include devices (mobile){
+            font-size: 15px;
+            line-height: 16px;
+        }
+    }
+    p{
+        font-size: 17px;
+        line-height: 20.4px;
+        letter-spacing: -1%;
+        font-weight: 300;
+        @include devices (tablet){
+            font-size: 10px;
+            line-height: 14px;
+        }
+        @include devices (mobile){
+            font-size: 7px;
+            line-height: 8px;
+        }
+    }
+    a{
+        width: 139px;
+        background-color: white;
+        height: 40px;
+        font-size: 16px;
+            @include devices (tablet){
+                width: 69px;
+                height: 30px;
+                font-size: 6px;
+            }
+        img{
+            width: 10px;
+            height: 16px;
+            margin-left: 8px;
+            object-fit:contain;
+        }
+    }
+   
+    }
+

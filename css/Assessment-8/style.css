@@ -1,0 +1,33 @@
+.body{
+margin: 0;
+padding: 0;
+}
+
+.container{
+    background-color: aqua;
+    width: 800px;
+}
+
+.item{
+    border: 2px solid gray;
+    margin: 12px 3px;
+    padding:  12px 3px;
+    background-color: blanchedalmond;
+}
+
+.english{
+
+    width: 50%;
+    float: left;
+}
+
+.science{
+    width: 50%;
+    float: left;
+}
+
+.math{
+    width: 100%;
+    /* it clear the overlap from both the righr and left float */
+    clear: both;
+}

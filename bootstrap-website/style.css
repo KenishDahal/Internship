@@ -1,0 +1,21 @@
+body {
+  background-color: #D7D2CA;
+}
+
+.navbar {
+  height: 75px;
+  padding: 30px 56px;
+  margin: 0;
+}
+.navbar--bootstrap {
+  margin: 0;
+  padding: 0;
+}
+.navbar--bootstrap__ul {
+  gap: 32px;
+}
+.navbar--bootstrap__ul__image {
+  gap: 8px;
+}
+
+/*# sourceMappingURL=style.css.map */

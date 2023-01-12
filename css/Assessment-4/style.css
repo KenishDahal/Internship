@@ -1,0 +1,24 @@
+.normal-paragraph{
+    border: 1px solid palegreen;
+}
+
+.block {
+    display: block;
+    border: 1px solid red;
+  }    
+  
+li {
+    border: 2px solid blue;
+  }
+  
+ul {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+  } 
+  
+.inline {
+    display: inline;
+    border: 2px solid red;;
+  }
+           

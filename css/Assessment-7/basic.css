@@ -1,0 +1,35 @@
+html, body {
+  background-color: #ffeead;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #ffeead;
+    margin: 0 28px  ;
+}
+
+.grid-container > div:nth-child(1n) {
+  background-color: #96ceb4;	
+}
+
+.grid-container > div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.grid-container > div:nth-child(2n) {
+      background-color: #ff6f69;
+}
+
+.grid-container > div:nth-child(4n) {
+      background-color: #ffcc5c;
+}
+
+
+    
+
+

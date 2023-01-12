@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+:root{
+ --white:#FFFFFF;
+ --shadow-black:#544e1e;
+ --border-color:#E9EDEF;
+ --sky-blue:#7DD0ED;
+ --dark-blue:#27A6D2;
+ --grey:#5F5F5F;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+    background-color:  #F5F5F5;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(12,1fr);
+    column-gap: 18px;
+}
+
+.price-tag{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 1px 0  var(--shadow-black);
+    /* height: 363px; */
+}
+
+.price-tag--basic{
+    grid-column: 5/span 4 ;
+    grid-row: 2/span 4;
+    text-align: center;
+}
+
+.price-tag--pro{
+    grid-column: 9/span 4;
+    grid-row: 2/span 4;
+    text-align: center;
+}
+
+.price-tag--premium{
+    grid-column: 13/span 4 ;
+    grid-row: 2/span 4;
+    text-align: center;
+}
+
+.price-tag__heading{
+    background-color: var(--sky-blue);
+    width: 100%;
+    color: var(--white) ;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 0 1px 0  var(--shadow-black);
+}
+.price-tag:hover .price-tag__heading{
+    background-color: var(--dark-blue);
+}
+
+.price-tag:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 3px 0 var(--shadow-black);
+}
+
+.price-tag__price-section{
+    display: flex;
+    flex-direction: column;
+    color: var(--grey);
+    /* align-items: center; */
+}
+
+.price-tag__price-section__amount{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77px;
+    margin: 10px ;
+}
+.price-tag:hover .price-tag__price-section__amount  {
+    color: var(--dark-blue);
+}
+
+h4{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+.price-tag__price-paragraph{
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.price-tag:hover h4 {
+    color: var(--dark-blue);
+}
+
+/* Main data Container */
+.data-card{
+    grid-column: 4/span 14 ;
+    grid-row: 7/span 5 ; 
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color:var(--white);
+    border-radius: 5px;
+    align-items: center;
+    align-self: center;
+}
+
+.data-card__part{
+    width: 100%;
+}
+
+.data-card__text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+}
+/* hover color */
+.line{
+    width: 100%;
+    background-color: var(--border-color);
+    height: 30px;
+    border-radius: 20px;
+}
+/* 1st users animation */
+
+.data-card__line--users{
+    width: 20%;
+    background-color: var(--sky-blue);
+    height: 30px;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+.price-tag:hover~ .data-card .data-card__line--users{
+    visibility: visible;
+}
+
+/* 2nd gb animation */
+
+.data-card__line--gb{
+    width: 40%;
+    background-color: var(--sky-blue);
+    height: 30px;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+.price-tag:hover~ .data-card .data-card__line--gb{
+    visibility: visible;
+}
+
+/* 3rd project animation */
+
+.data-card__line--project{
+    width: 10%;
+    background-color: var(--sky-blue);
+    height: 30px;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+.price-tag:hover~ .data-card .data-card__line--project{
+    visibility: visible;
+}

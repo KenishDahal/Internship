@@ -1,0 +1,56 @@
+<!-- you can avoid the jumpy change of layout 
+    that can happen when resizing a window 
+    if you used media queries, and with less code! -->
+
+    <!--For max();
+         In this way, the text will be a tenth of the viewport 
+    height, unless the viewport height becomes too small. The text will always 
+    have a font-size of at least 1rem to ensure legibility. -->
+    h1 {
+        font-size: max(1rem, 10vh);
+    }
+   
+<!--   For min()
+    Your page will have a width equal to 90% of the vportiew 
+    width, or 600px wide, whatever is smallest. So if the viewport width is larger than ~670px,
+     the form will not stretch horizontally. -->
+    form {
+        width: min(600px, 90vw);
+    }
+<br>
+   Ignore this upper segments ! 
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>form</title>
+    </head>
+    <body>
+        <!-- Example with min() and max() values -->
+        <form>
+            <h1>Welcome, who are you?</h1>
+            <label for="name">name:</label><input type="text" id="name">
+          </form>
+        
+    </body>
+    </html>
+
+    
+    <!-- You can use clamp to have layout elements 
+    responsively resize within a range.
+    it takes 3 value 
+    first = min 
+    sec = preffered value
+    third= max
+ -->
+    h1 {
+        font-size: clamp(1rem, 10vw, 2rem);
+    }
+
+
+
+  

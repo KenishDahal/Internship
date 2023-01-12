@@ -1,0 +1,30 @@
+.body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    background-color: red;
+    /* making elemrnt flex  also can remove white space */
+    display: flex;
+    /* margin: 30px auto */
+}
+
+.section{
+
+    /* Assigning both element as 50% width */
+    width: 50%;
+    height: 300px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+}
+
+.one{
+background-color: green;
+}
+
+.two{
+    background-color: green;
+
+}

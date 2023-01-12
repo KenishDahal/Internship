@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+         /* 1. <!-- Combining selector - if it has same property and values --> */
+        span , li.blue{
+            background-color: blue;
+        }
+        /* 2. Sibling Selector -  it only gives value if the child element is started just after the parent element */
+        div > span{
+      background:red; 
+        }  
+        /* 3. Required and Optional Selectors in forms - it use values if it matches with the property field. */
+      input:required{
+        border : 1px solid black;
+      }
+      input:optional{
+        border: 1px solid red;
+      }
+      /* 4. Pseudo-classes- It hover at button*/
+      button:hover {
+        color: blue;
+}
+    </style>
+    
+</head>
+<body>
+    <div class="red"> this is red</div>
+    <span class="blue">This is span blue</span>
+    <div>
+        <span>
+            <b>nested text</b>
+        </span>
+    </div>
+    <ul>
+        <li class="blue">item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+<!-- 3. -->
+    <form>
+        <input type="text" required="required"/>
+        <input type="text"/>
+<!-- 4. -->
+        <button >submit</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
