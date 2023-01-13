@@ -120,13 +120,13 @@ new-features */
 @media only screen and (min-width:721px){
     .grid-container{
         display: grid;
-        grid-template-columns: 1000px 400px ;
-        grid-template-rows:  400px 182px 127px 200px; 
+        grid-template-columns: 9fr 3fr ;
+        grid-template-rows:  400px 182px 127px 136px; 
         grid-template-areas: 
         "background-picture  new-features "
         "main-description new-features"
         "review review ";
-        gap: 20px;
+        gap: 40px;
     }
     .background-picture{
         grid-area: background-picture;
@@ -180,8 +180,6 @@ new-features */
         height:250px;
     }
     
-    
-
 
     /* .flex-review{
         display:flex ;
@@ -241,7 +239,7 @@ label{
    }
    .menu-list{
       background-color: #FDF8EC;;
-     padding: 0;
+      padding: 0;
       text-align: left;
       width: 400px;
       height: 100vh;
