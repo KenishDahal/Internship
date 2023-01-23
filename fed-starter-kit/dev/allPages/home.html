@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      @@include('../includes/head.html',{'pageTitle':'Home'})
+    </head>
+    <body class="bg-blush">
+      
+        <!-- @@include('../includes/modules/cards/blog-card.html',{
+            'img':'images/girl-with-cycle.svg'       
+         }) -->
+         <!-- @@include('../includes/modules/section/blog-image-with-text.html',{
+            'h' : 'h2',
+            'para': '',
+            'headerInfo' : 'Vivamus vitae finibus dolor. Suspendisse finibus ante in sapien fermentum.'
+         })
+          -->
+          
+       <!-- First row -->      
+            @@include('../includes/modules/cards/image-card.html',{
+                'pageTitle':'Sections'
+            })
+
+       <!-- second rw -->
+       <section class="container">
+            @@include('../includes/modules/cards/insideAutoLayout.html',{
+                'pageTitle':'home-insideAutoLayout',
+                'bgCol': 'bg-white',
+                'border-color': 'border-dark',
+                'borderCol': 'border-sky'
+            })  
+       </section>
+       
+       <!-- 3rd row -->
+        <section class="container-fluid section1 bg-white ">
+            @@include('../includes/modules/cards/card-a01.html',{
+           'mt': 'mt-9',
+           'mt-md': 'mt-md-10',
+           'mt-xl': 'mt-xl-20' ,
+           "videoShowHide":'',
+           "imageShowHide": 'd-none',
+           'justifyCB': 'justify-content-xl-between',
+            'bg': 'bg-mint',
+            'imgTag':'images/group.png',
+           'justifyCA': 'justify-content-md-around',
+           'bg': 'bg-white',
+           'd-none': 'd-none',
+           'heading': 'ABOUT US'
+            })
+        </section>
+
+       <!-- 4th -->
+       <section class="container-fluid section1 bg-mint">
+        @@include('../includes/modules/cards/card-a01.html',{
+            'mt': '0',
+            'mt-md': '0',
+            'mt-xl': '0',
+            "videoShowHide":'d-none',
+            "imageShowHide": '',
+            'justifyCB': 'justify-content-md-between',
+            'justifyCA': 'justify-content-xl-around',
+            'heading': 'BLOGS',
+            'd-none': 'd-none',
+            'seperate-class': 'blog--section',
+            'a-item-c':'',
+            'reverse': 'flex-column-reverse flex-md-row-reverse',
+            'imgTag': 'images/group.png'
+             })
+         </section>
+         
+       <!-- 5th -->
+            @@include('../includes/modules/cards/card-caraousel.html',{
+                 })
+
+       <!-- 7th -->
+        <section class="container-fluid section1 bg-white">
+            @@include('../includes/modules/cards/card-a01.html',{
+                'mt': '0',
+                'mt-md': '0',
+                'mt-xl': '0',
+                "videoShowHide":'d-none',
+                "imageShowHide": '',
+                'bg': 'bg-white',
+                'justifyCB': '',
+                'justifyCA': '',
+                'imgTag':'images/Video.svg',
+                'a-item-c': 'align-items-center',
+                'heading': 'THINGS TO REMEMBER',
+                'paragraph': 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable.If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.',
+                'reverse': 'flex-column-reverse flex-md-row'
+            })
+        </section>
+
+       <!-- 8th -->
+            @@include('../includes/modules/cards/card-client.html',{
+                 })
+
+    </body>
+</html>

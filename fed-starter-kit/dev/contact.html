@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      @@include('includes/head.html',{'pageTitle':'contact'})
+    </head>
+    <body>
+        @@include('includes/header.html', {
+            'headerSkin': 'theme-header--dark'
+        })
+
+        @@include('includes/modules/section/blog-image-with-text.html',{
+            'h': 'h2',
+            'headerInfo': 'Vivamus vitae finibus dolor. Suspendisse finibus ante in sapien fermentum.',
+            'para': ''
+          })
+     
+            @@include('includes/modules/section/contact-form.html',{
+              'pageTitle':'contact-form'
+            })
+
+                 <!-- footer -->
+      @@include('includes/footer.html')
+      @@include('includes/scripts.html')
+    </body>
+    </html>

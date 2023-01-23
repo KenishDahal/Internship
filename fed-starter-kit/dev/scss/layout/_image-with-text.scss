@@ -1,0 +1,48 @@
+.image-with-text{
+  position: relative;
+  figure{
+    height: 100%;
+    img{
+      width: 95%;
+      height: 100%;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+
+    }
+  }
+  &__block {
+    position: absolute;
+    bottom:0.5rem;
+    right: 2rem;
+    background-color: black;
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: $ash;
+    color: black;
+    gap: 3rem;
+    padding-right: 0;
+    justify-content: space-between;
+    @include media-breakpoint-down(lg) {
+      position:static;
+      gap: 0;
+    }
+    &--h{
+      padding-block: 2.4rem;
+      @include media-breakpoint-down(md) {
+        padding-block: 1.6rem;
+        text-transform: capitalize;
+      }
+    }
+    i{
+      padding: 4rem;
+      font-size: 4rem;
+      // background-color: $peach;
+      @include media-breakpoint-down(md) {
+        padding-inline: 14.1px;    
+      }
+    }
+  }
+
+}

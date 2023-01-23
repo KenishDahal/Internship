@@ -7,10 +7,14 @@
                 @@include('includes/header.html', {
                     'headerSkin': 'theme-header--dark'
                 })
-               
-           
-            <!-- @@include('includes/footer.html')
-            @@include('includes/scripts.html') -->
-        </div>
+                <!-- home page -->
+                <main>
+                @@include('allPages/home.html',{'pageTitle':'home'})
+                </main>
+            
+                <!-- footer -->
+            @@include('includes/footer.html')
+            @@include('includes/scripts.html')
+
     </body>
 </html>

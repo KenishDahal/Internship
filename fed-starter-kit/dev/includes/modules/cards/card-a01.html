@@ -1,4 +1,32 @@
-<article class="card-a01">
-  <h5 class="stat mb-2">@@stat</h5>
-  <span class="eyebrow text-primary">@@eyebrow</span>
+<article class="card-a01 container">
+        <div class="row column-changing @@seperate-class @@reverse @@bg @@a-item-c py-10 py-md-20 py-xl-30 @@mt @@mt-md @@mt-xl">
+            <div class="col-sm-12 col-md-6 col-xl-6 d-flex flex-column gap-4 @@justifyCB @@justifyCA">   
+                <h6>@@heading</h6>
+                <h3>Integer at neque ac metus fringilla dapibus et eu eros. Vivamus vitae finibus dolor. Suspendisse finibus ante in sapien fermentum, quis condimentum turpis consequat.</h3>
+                <p class="@@d-none body-l">@@paragraph</p> 
+                <!-- button -->
+                  @@include('../button/button.html',{
+                    'btnText': "Learn more",
+                    'textColor': 'text-dark',
+                    'bC': 'border-dark'
+                }) 
+            </div>
+            
+             <div class="video @@videoShowHide bg-ash col-sm-12 col-md-6 col-xl-5 offset-xl-1 p-6 mt-10 mt-md-0">
+              <h6> HOW ABOUT US?</h6>
+              <div class="feature-video">
+                <video width="100%" controls>
+                    <source src="images/fun1.mp4" type="video/mp4">
+                  </video>
+              </div>
+             </div>
+
+             <div class="image @@imageShowHide col-sm-12 col-md-6 col-xl-6 ">      
+              <div class="feature-img ratio ratio-510x438">
+                  <img src="@@imgTag">
+              </div>
+             </div> 
+    </div>
 </article>
+<!-- mt-34 mt-md-6 mt-xl-8 -->
+

@@ -17,8 +17,9 @@ h1,
     font-size: 3.5rem;
     line-height: 4rem;
     font-weight: 400;
+    letter-spacing: -2%;
     @include media-breakpoint-up(xl) {
-        font-size: 6.4rem;
+        font-size: 5.5rem;
         line-height: 6.4rem;
     }
 }
@@ -30,7 +31,7 @@ h2,
     font-weight: 400;
     @include media-breakpoint-up(xl) {
         font-size: 4.4rem;
-        line-height: 4.4rem;
+        line-height: 5.06rem;
     }
 }
 
@@ -79,26 +80,31 @@ h6,
         line-height: 2rem;
     }
 }
-
-body {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    font-weight: 400;
+.body-xl {
+    font-size: 2.3rem;
+    line-height: 3.22rem;
     @include media-breakpoint-up(xl) {
-        font-size: 1.8rem;
-        line-height: 2.7rem;
-        font-weight: 700;
+        font-size: 2.8rem;
+        line-height: 3.92rem;
     }
 }
-
-.body-1{
-    font-size: 2.2rem;
-    line-height: 2.3rem;
+.body-l {
+    font-size: 2.0rem;
+    line-height: 3.0rem;
+    font-weight: 400;
     @include media-breakpoint-up(xl) {
         font-size: 2.3rem;
         line-height: 3.45rem;
     }
-}   
+}
+.body {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    @include media-breakpoint-up(xl) {
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+    }
+}
 
 .eyebrow {
     font-size: 1.4rem;
@@ -150,19 +156,4 @@ caption{
     }
 }
 
-// scss-docs-start color-variables
-$blue:    #0d6efd !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #d63384 !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #198754 !default;
-$cyan:    #0dcaf0 !default;
-$space:   #222222 !default;
-$teal:    #114E60 !default;
-$sky:     #325288 !default;
-$mint:    #325288 !default;
-$peach:   #F5CEBE !default;
-$blush:   #F4EEE8 !default;
+

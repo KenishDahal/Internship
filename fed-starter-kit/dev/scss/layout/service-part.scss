@@ -1,0 +1,22 @@
+.service--card{
+    &__heading{
+        // justify-content: space-between;
+        .h2{
+            width: 100%;
+            @include media-breakpoint-up(md) {
+                width: 45%;
+            }
+            @include media-breakpoint-up(xl) {
+                width: 35%;
+            }
+        }
+        .body{
+            @include media-breakpoint-up(md) {
+                width: 55%;
+            }
+            @include media-breakpoint-up(xl) {
+                width: 65%;
+            }
+        }
+        }
+    }

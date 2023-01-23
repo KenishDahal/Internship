@@ -3,3 +3,41 @@
         background: $white;
     }
 }
+
+.navbar{
+    &__logo{
+        margin-left: -3px;
+
+        img{
+            @include media-breakpoint-up(xl) {
+                margin-left: -10px;
+                height: 123px;
+            }
+            @include media-breakpoint-up(lg) {
+                height: 123px;
+            }
+
+                height: 69px;
+                margin-left: 20px;
+        }
+    }
+    i{
+        @include media-breakpoint-up(md) {
+            margin-left: -10px;
+        }
+        font-size: 1.6rem;     
+    }
+    li{
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 150%;  
+        .nav-link{
+            color: $space;
+        }
+    }
+    .offcanvas{
+        &-body{
+            padding-block: 20.05rem;
+        }
+    }
+}

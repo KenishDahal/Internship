@@ -3,6 +3,7 @@
 @import 'global/fonts';
 
 
+
 // 2. Configuration
 @import '../../node_modules/bootstrap/scss/functions';
 @import './variables';
@@ -11,21 +12,38 @@
 @import '../../node_modules/bootstrap/scss/mixins';
 @import '../../node_modules/bootstrap/scss/utilities';
 
-
 // 3. Layout & components
 @import '../../node_modules/bootstrap/scss/root';
-@import '../../node_modules/bootstrap/scss/reboot';
-@import '../../node_modules/bootstrap/scss/type';
-@import '../../node_modules/bootstrap/scss/images';
-@import '../../node_modules/bootstrap/scss/containers';
-@import '../../node_modules/bootstrap/scss/grid';
-@import '../../node_modules/bootstrap/scss/navbar';
-@import '../../node_modules/bootstrap/scss/nav';
-@import '../../node_modules/bootstrap/scss/forms';
-@import '../../node_modules/bootstrap/scss/dropdown';
-@import '../../node_modules/bootstrap/scss/buttons';
-@import '../../node_modules/bootstrap/scss/button-group';
-@import '../../node_modules/bootstrap/scss/modal';
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/accordion";
+@import "../../node_modules/bootstrap/scss/breadcrumb";
+@import "../../node_modules/bootstrap/scss/pagination";
+@import "../../node_modules/bootstrap/scss/badge";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/progress";
+@import "../../node_modules/bootstrap/scss/list-group";
+@import "../../node_modules/bootstrap/scss/close";
+@import "../../node_modules/bootstrap/scss/toasts";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/tooltip";
+@import "../../node_modules/bootstrap/scss/popover";
+@import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/spinners";
+@import "../../node_modules/bootstrap/scss/offcanvas";
+@import "../../node_modules/bootstrap/scss/placeholders";
 
 
 // 4. Helpers
@@ -62,31 +80,35 @@
 @import 'modules/forms';
 @import 'modules/thumbnail';
 @import 'modules/swiper';
+@import 'modules/dropdown';
 
 
 // 10. Global Components to use
-@import "layout/layouts";
 @import "layout/header";
 @import "layout/offcanvas";
 @import "layout/footer";
 @import "layout/main";
 @import "layout/post";
 @import "layout/hero";
+@import "layout/section1.scss";
+@import "layout/image-with-text";
+@import "layout/blog-image-with-text";
+@import "layout/category&dropdown";
+@import "layout/service-part";
+@import "layout/blog-content";
+@import "layout/contact-form";
+
+
 
 
 // 11. Cards
 @import 'cards/card-a01';
+@import 'cards/card-client';
+@import 'cards/card-caraousel';
+@import 'cards/card-blogs';
+@import 'cards/blog-card';
+@import "cards/inside-auto-layout";
+@import "cards/hiring-banner";
+@import "cards/input-card";
 
-.main-container{
-   
-}
-img{
-     
-    margin-left: -27.5px;
-
-}
-
-.collapse{
-    margin-right: -27.5px;
-}
 

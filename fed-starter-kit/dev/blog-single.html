@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      @@include('includes/head.html',{'pageTitle':'about'})
+    </head>
+    <body>
+      @@include('includes/header.html', {
+        'headerSkin': 'theme-header--dark'
+    })
+    <!-- 1st row -->
+    @@include('includes/modules/section/blog-image-with-text.html',{
+      'h': 'h2',
+      'headerInfo': 'Vivamus vitae finibus dolor. Suspendisse finibus ante in sapien fermentum.',
+      'para': ''
+    })
+
+   <!-- 2nd row -->
+    @@include('includes/modules/section/blog-content.html',{
+      'h': 'h2',
+      'headerInfo': 'Vivamus vitae finibus dolor. Suspendisse finibus ante in sapien fermentum.',
+      'para': ''
+    })
+
+    @@include('includes/modules/section/blog-frame.html',{
+      'd-none':'d-none',
+      'd-none-only':'d-none d-lg-none d-xl-block'
+    })
+
+         <!-- footer -->
+         @@include('includes/footer.html')
+         @@include('includes/scripts.html')
+
+    </body>
+ </html>

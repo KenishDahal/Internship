@@ -1,12 +1,16 @@
 import 'popper.js';
-// import 'bootstrap/js/dist/button';
+import 'bootstrap/js/dist/button';
 import 'bootstrap/js/dist/modal';
 // import 'bootstrap/js/dist/dropdown';
+import 'bootstrap/js/dist/dropdown'
+import 'bootstrap/js/dist/offcanvas';
 // import 'bootstrap/js/dist/modal';
 // import 'bootstrap/js/dist/tab';
-// import 'bootstrap/js/dist/collapse';
-// import 'bootstrap-select';
-// import 'bootstrap/js/dist/modal';
+import 'bootstrap/js/dist/collapse';
+import 'bootstrap-select';
+import 'bootstrap/js/dist/modal';
+import 'bootstrap/dist/js/bootstrap'
+
 
 
 class global {
@@ -19,6 +23,7 @@ class global {
     }
 
     stickyHeader() {
+        console.log("jjj")
         var elemBody = $('body');
         var pageHeader = $('.theme-header');
         if ($(elemBody).hasClass('home')) {

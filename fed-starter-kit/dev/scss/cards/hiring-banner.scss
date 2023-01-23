@@ -1,0 +1,20 @@
+.hiring--banner{
+    padding-bottom: 2.4rem;
+    @include media-breakpoint-up(md) {
+    padding-bottom: 4rem;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-bottom: 12rem;
+    }
+    &__article{
+        box-shadow:  1rem 1rem #f4eee8;
+    }
+}
+
+.blog--hiring--banner{
+    padding-block: 4rem;
+    @include media-breakpoint-up(md) {
+        padding-block: 8rem;
+        }
+}
+

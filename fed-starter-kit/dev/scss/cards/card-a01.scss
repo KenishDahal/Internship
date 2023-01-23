@@ -1,0 +1,15 @@
+// .card-a01{
+//     row{
+//         @include media-breakpoint-down(md) {
+//             flex-direction: column-reverse;
+//         }
+//     }
+// }
+.card-a01:not(:nth-child(1n)){
+    .column-changing{
+        @include media-breakpoint-down(md) {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+}

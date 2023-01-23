@@ -1,0 +1,29 @@
+.categoryDropdown{
+  padding-top: 6rem;
+  @include media-breakpoint-down(md) {
+    padding-top: 2rem;
+  }
+  &__ul{
+    padding-bottom: 5.3rem;
+    @include media-breakpoint-down(md) {
+      padding-bottom: 4rem;
+    }
+    li{
+      padding-right: 1.5rem;
+    }
+  }
+    .input-group{
+        width: 60%;
+        border-radius: 20px;
+        @include media-breakpoint-down(md) {
+            width: 100%;
+          }
+          i{
+            align-items: center;
+            padding: 10px;
+          }
+          input{
+            border-radius: 20px;
+          }
+    }
+}

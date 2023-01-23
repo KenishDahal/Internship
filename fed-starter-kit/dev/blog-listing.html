@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      @@include('includes/head.html',{'pageTitle':'about'})
+    </head>
+    <body>
+      @@include('includes/header.html', {
+        'headerSkin': 'theme-header--dark'
+    })
+    <!-- 1st row -->
+    @@include('includes/modules/section/blog-image-with-text.html',{
+      'h': 'h2',
+      'headerInfo': 'Vivamus vitae finibus dolor. Suspendisse finibus ante in sapien fermentum.',
+      'para': ''
+    })
+    <!-- 2nd row -->
+   @@include('includes/modules/cards/hiring-banner.html',{
+            'useCustom': 'hiring--banner',
+            'colSize': 'col-xl-10',
+            'justifyContent': 'justify-content-xl-center',
+            'hiring--banner__article': 'hiring--banner__article',
+            'bg':'bg-mint',
+            'px': 'px-6',
+            'py': 'py-6',
+            'pxMd': 'px-md-20',
+            'pyMd': 'py-md-20',
+            'cardBg': 'bg-white',
+            'typoOne': 'h3',
+            'typoTwo': 'body',
+            'contentOne': 'November 11, 2021',
+            'contentTwo': 'Morbi pellentesque justo non magna iaculis efficitur in quis magna. Vivamus consectetur placerat iaculis. Aenean in orci et libero auctor elementum non in diam. Suspendisse vel urna luctus, tristique purus a, commodo metus. Nam commodo turpis eget magna placerat, quis molestie mauris volutpat',
+            'nested-button-text': "Read More"
+          }) 
+    <!-- 3rd row -->
+    @@include('includes/modules/section/blog-frame.html',{
+      
+      })
+     <!-- 4th row -->
+      @@include('includes/modules/cards/hiring-banner.html',{
+        'useCustom': 'blog--hiring--banner',
+        'hiring--banner__article': '',
+        'bg':'bg-mint',
+        'typoOne': 'h3',
+        'typoTwo': 'body',
+        'contentOne': 'Proin pretium risus suscipit viverra mattis. Aliquam non nunc ligula.',
+        'contentTwo': 'Integer at neque ac metus fringilla dapibus et eu eros.',
+        'nested-button-text': "Contact"
+      }) 
+
+
+     <!-- footer -->
+     @@include('includes/footer.html')
+     <!-- Script -->
+     @@include('includes/scripts.html')
+
+    </body>
+</html>
+  
+   

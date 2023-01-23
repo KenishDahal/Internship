@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      @@include('includes/head.html',{'pageTitle':'about'})
+    </head>
+    <body class="bg-mint">
+      @@include('includes/header.html', {
+        'headerSkin': 'theme-header--dark'
+    })
+   
+   
+      <!--first row  --> 
+      @@include('includes/modules/cards/image-card.html',{'pageTitle':'Sections'})
+
+      <!--second row  -->
+     <section class="container">
+      @@include('includes/modules/cards/insideAutoLayout.html',{
+          'pageTitle':'about-insideAutoLayout',
+          'flexReverse': 'flex-row-reverse',
+          'bgCol': 'bg-sky',
+          'tc': 'text-white',
+          'tct': 'text-white',
+          'borderCol': 'border-dark'
+      })
+     </section>  
+     
+     <!--third row  -->
+     @@include('includes/modules/section/about-our-service.html',{
+    })
+     <!-- fourth row -->     
+      @@include('includes/modules/section/service-part.html',{
+      })
+
+     <!-- fifth row -->
+      @@include('includes/modules/section/service-part.html',{
+     })
+
+     <!-- footer -->
+      @@include('includes/footer.html')
+            @@include('includes/scripts.html')
+
+    </body>
+    </html>

@@ -14,7 +14,7 @@ body {
 body {
     letter-spacing: normal;
     @include font-smoothing(on);
-    font-size: 1.8rem;
+    font-size: 10px;
     line-height: 2.8rem;
 
     &.prevent-scrolling {

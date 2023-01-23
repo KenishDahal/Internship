@@ -1,0 +1,18 @@
+.dropdown{
+    ul{  
+        font-size: 1.8rem; 
+        font-weight: 600;
+        letter-spacing: 10%;
+        transform: translate3d(0.5px, 30px, 0px);
+
+        @include media-breakpoint-down(md) {
+            min-width: 37rem;
+        }
+        @include media-breakpoint-down(sm) {
+            min-width: 17.5rem;
+        }
+        li{
+            border-bottom: 0.1rem solid $dark;
+        }
+}
+}
