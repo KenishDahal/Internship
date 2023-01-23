@@ -1,0 +1,168 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4 {
+    @extend %heading;
+}
+
+h1,
+.h1,
+.display-1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    font-weight: 400;
+    @include media-breakpoint-up(xl) {
+        font-size: 6.4rem;
+        line-height: 6.4rem;
+    }
+}
+
+h2,
+.h2 {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    font-weight: 400;
+    @include media-breakpoint-up(xl) {
+        font-size: 4.4rem;
+        line-height: 4.4rem;
+    }
+}
+
+h3,
+.h3 {
+    font-size: 2.4rem;
+    line-height: 2.76rem;
+    letter-spacing: -2%;
+    font-weight: 400;
+    @include media-breakpoint-up(xl) {
+        font-size: 3.6rem;
+        line-height: 3.6rem;
+    }
+}
+
+h4,
+.h4 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    font-weight: 400;
+    @include media-breakpoint-up(xl) {
+        font-size: 2.8rem;
+        line-height: 3rem;
+    }
+}
+
+h5,
+.h5{
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 400;
+    @include media-breakpoint-up(xl) {
+        font-size: 2.3rem;
+        line-height: 2.8rem;
+    }
+}
+
+h6,
+.h6 {
+    font-size: 1.6rem;
+    line-height: 1.93rem;
+    letter-spacing: 10%;
+    font-weight: 600;
+    @include media-breakpoint-up(xl) {
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    @include media-breakpoint-up(xl) {
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        font-weight: 700;
+    }
+}
+
+.body-1{
+    font-size: 2.2rem;
+    line-height: 2.3rem;
+    @include media-breakpoint-up(xl) {
+        font-size: 2.3rem;
+        line-height: 3.45rem;
+    }
+}   
+
+.eyebrow {
+    font-size: 1.4rem;
+    line-height: 1;
+    &-1 {
+        @include media-breakpoint-up(md) {
+            font-size: 1.6rem;
+        }
+        @include media-breakpoint-up(xl) {
+            font-size: 2rem;
+        }
+    }
+}
+
+.quote {
+    &-1 {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        @include media-breakpoint-up(xl) {
+            font-size: 3.6rem;
+            line-height: 4rem;
+        }
+    }
+}
+
+.button,
+.btn {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    @include media-breakpoint-up(xl) {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    @extend .transition-fast;
+}
+
+caption{  
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 500;
+    @include media-breakpoint-up(xl) {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+    }
+}
+
+// scss-docs-start color-variables
+$blue:    #0d6efd !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #198754 !default;
+$cyan:    #0dcaf0 !default;
+$space:   #222222 !default;
+$teal:    #114E60 !default;
+$sky:     #325288 !default;
+$mint:    #325288 !default;
+$peach:   #F5CEBE !default;
+$blush:   #F4EEE8 !default;
