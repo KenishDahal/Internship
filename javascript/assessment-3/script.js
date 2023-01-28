@@ -6,6 +6,7 @@ slider.setAttribute("class", "slider");
 body.appendChild(slider);
 
 let Slide_No = 4;
+let dots_No = 3;
 let img_Array = [
   {
     src: "https://source.unsplash.com/random?landscape,mountain",
@@ -58,8 +59,20 @@ let leftArrow = document.createTextNode("<");
 prevSlide.appendChild(leftArrow);
 slider.appendChild(prevSlide);
 
+// dots
+let dots = document.createElement("div");
+dots.setAttribute("class", "dots");
+body.appendChild(dots);
+
+for (let i = 0; i < dots_No; i++) {
+  let dot = document.createElement("span");
+  dot.setAttribute("class", "dot");
+  dots.appendChild(dot);
+}
+
 // js
 const slides = document.querySelectorAll(".slide");
+const dotted = document.querySelectorAll(".dot");
 
 slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${indx * 100}%)`;
@@ -71,6 +84,7 @@ let curSlide = 0;
 let maxSlide = slides.length - 1;
 
 // add event listener and navigation functionality
+
 nextSlide.addEventListener("click", function () {
   // check if current slide is the last and reset current slide
   if (curSlide === maxSlide) {
@@ -83,7 +97,13 @@ nextSlide.addEventListener("click", function () {
   slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
   });
+
+  for (i = 0; i < dotted.length; i++) {
+    dotted[i].className = dotted[i].className.replace(" active", "");
+  }
+  dotted[curSlide-1].className += " active";
 });
+
 
 // add event listener and navigation functionality
 prevSlide.addEventListener("click", function () {
@@ -98,6 +118,19 @@ prevSlide.addEventListener("click", function () {
   slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
   });
+
+  for (i = 0; i < dotted.length; i++) {
+    dotted[i].className = dotted[i].className.replace(" active", "");
+  }
+  dotted[curSlide-1].className += " active";
+  // dot.forEach(())
 });
+
+// dots
+// const dotted = document.querySelectorAll(".dot");
+
+// dotted.forEach((dot, indx) => {
+//   dot.style.transform = `translateX(${indx * 100}%)`;
+//   });
 
 
