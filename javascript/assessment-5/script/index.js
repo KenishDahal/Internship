@@ -65,9 +65,7 @@ for (let i = 0; i < NO_BOXES; i++) {
         }
         
     }
-    // col(box);
-    // console.log(col(box));
-
+// checking collision
     if(col(box)){
         box_Object[`box${i}`].DirectionX = -1;  
         box_Object[`box${i}`].DirectionY = -1; 

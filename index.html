@@ -71,47 +71,54 @@
     <script>
       const projects = [
         {
-          class: "card card-figma",
-          href: "figma.html",
-          name: "figma",
-          target: "_blank",
-        },
-        {
           class: "card card-html",
           href: "html.html",
           name: "html",
           target: "_blank",
+          color : "black"
         },
         {
           class: "card card-css",
           href: "css.html",
           name: "css",
           target: "_blank",
+          color : "#ededed"
         },
         {
           class: "card card-bootstrap",
           href: "bootstrap.html",
           name: "bootstrap",
           target: "_blank",
+          color : "black"
         },
         {
           class: "card card-scss",
           href: "scss.html",
           name: "scss",
           target: "_blank",
+          color : "#ededed"
         },
         {
           class: "card card-fed",
           href: "fed-final.html",
           name: "Fed Final",
           target: "_blank",
+          color : "black"
         },
         {
           class: "card card-fed",
           href: "javascript.html",
           name: "Javascript",
           target: "_blank",
+          color : "#ededed"
         },
+        {
+          class: "card card-figma",
+          href: "figma.html",
+          name: "figma",
+          target: "_blank",
+          color : "darkred"
+        }
       ];
       const main = document.getElementById("main");
       // introduction about me
@@ -134,6 +141,8 @@
         nameDiv.setAttribute("class", "name-div");
         let projectName = document.createTextNode(projects[i].name);
         card.appendChild(nameDiv);
+        // card.fontcolor("red");
+        card.style.color = projects[i].color;
         nameDiv.appendChild(projectName);
       }
     </script>
