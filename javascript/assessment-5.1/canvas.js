@@ -22,20 +22,21 @@ addEventListener("click", (event) => {
   mouse.y = event.clientY;
 
 
-  for (var i = 0; i < particles.length; i++) {
-    var particle = particles[i];
-    var dx = mouse.x - particle.x;
-    var dy = mouse.x - particle.y;
-    var distance = Math.sqrt(dx * dx + dy * dy);
+  // SPLICE.. NOT WORKING
+  // for (var i = 0; i < particles.length; i++) {
+  //   var particle = particles[i];
+  //   var dx = mouse.x - particle.x;
+  //   var dy = mouse.x - particle.y;
+  //   var distance = Math.sqrt(dx * dx + dy * dy);
 
-    if (distance < particle.radius) {
-      particles.splice(i, 1);
-      break;
-    }
-  }
+  //   if (distance < particle.radius) {
+  //     particles.splice(i, 1);
+  //     break;
+  //   }
+  // }
 
-  c.clearRect(0, 0, innerWidth, innerHeight);
-  draw();
+  // c.clearRect(0, 0, innerWidth, innerHeight);
+  // draw();
 
 });
 
@@ -118,7 +119,7 @@ function Particle(x, y, radius, color) {
     x: (Math.random() - 0.5)*2,
     y: (Math.random() - 0.5)*2,
   };
-  this.mass = 1;
+  this.mass = 0.2;
   this.radius = radius;
   this.color = color;
   this.image = new Image();
@@ -132,33 +133,33 @@ function Particle(x, y, radius, color) {
       if (this === particles[i]) continue;
       if (distance(this.x, this.y, particles[i].x, particles[i].y) -
           this.radius * 2 < 0) {
-        resolveCollision(this, particles[i]);     
+        resolveCollision(this, particles[i]);  
         // particles[i].rotate(rotate);
         // this.image.src = "boom.png";  
       }
-
     }
 
     if (this.x - this.radius <= 0 || this.x + this.radius >= innerWidth) {
       this.velocity.x = -this.velocity.x;
+      // this.image.src = "dead-ant.jpeg";    
     //  this.x.translate();
     // flipImage(this.image, c, this.x - this.radius <= 0, this.x + this.radius >= innerHeight);
-
     }
+
     if (this.y - this.radius <= 0 || this.y + this.radius >= innerHeight) {
       this.velocity.y = -this.velocity.y;
+      // this.image.src = "boom.p";      
       // flipImage(this.image, c, this.x - this.radius <= 0, this.x + this.radius >= innerHeight);
     }
     if (distance(mouse.x , mouse.y, this.x, this.y) < 18){
       // clearRect();
       c.fillStyle = "white";
       //  this.image.style.transform = "scaleY(-1)";
-      this.image.src = "";   
+      this.image.src = "assets/dead-ant.jpeg"; 
       // this.rotate(this.rotateImg);
       // c.clearRect();
       // particles[i].clearRect()
       //  ctx.clearRect(20, 20, 100, 50); 
-     
     }
 
     this.x += this.velocity.x;
@@ -197,8 +198,7 @@ let particles;
 function init() {
   particles = [];
  
-
-  for (let i = 0; i < 55; i++) {
+  for (let i = 0; i <44; i++) {
     const radius = 16;
     let oo = 180;
     let x = randomIntFromRange(radius, canvas.width - radius);
@@ -228,9 +228,7 @@ function animate() {
   particles.forEach((particle) => {
     particle.update(particles);
   });
-  
 }
-
 
 init();
 animate();
