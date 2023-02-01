@@ -1,9 +1,9 @@
-window.addEventListener('load', function(){
+// window.addEventListener('load', function(){
 let canvas = document.getElementById('canvas1');
 
 const ctx = canvas.getContext('2d');
-canvas.width =1400;
-canvas.height =900;
+canvas.width =window.innerWidth;
+canvas.height =window.innerHeight;
 let enemies = [];
 let finishGame = false ; 
 let score = [0];
@@ -189,28 +189,25 @@ function addEnemy(deltaTime){
         )
 }
 
-function pointCard(context){
+function pointCard(context,gameWidth,gameHeight){
     context.fillStyle ="white";
     context.font = "50px Regular"
-    context.fillText("Score:"+score,1200,100);
+    context.fillText("Score:"+score,gameWidth-300,100);
     
-   passFinishGame(context);
-
-    }
-
-// goes to pointCard Function --- // game over text
-function passFinishGame(context){
     if(finishGame){
         let txt =  "Game Over:\nTotal score:\n Enter to restart 🚙";
         let lines = txt.split('\n');
         let lineheight = 54;
         // for (var i = 0; i<lines.length; i++){
-        context.fillText(lines[1]+score,600,400 +(1*lineheight) )
-        context.fillText(lines[0],600,400 +(0*lineheight) )
-        context.fillText(lines[2],540,400 +(2.3*lineheight) )
+        context.fillText(lines[0],gameWidth/2-100, 400 +(0*lineheight) )
+        context.fillText(lines[1]+score,gameWidth/2-100,400 +(1*lineheight) )
+        context.fillText(lines[2],gameWidth/2-140, 400 +(2.3*lineheight) )
 
-        // }
-}
+    }
+// // goes to pointCard Function --- // game over text
+// function passFinishGame(context){
+//         // }
+// }
 }
 
 function reloadGame(){
@@ -242,7 +239,7 @@ function animate(timeStamp){
     player.draw(ctx);
     player.update(input,enemies,player);
     addEnemy(deltaTime);
-    pointCard(ctx);
+    pointCard(ctx,canvas.width,canvas.height);
     // enemy.draw(ctx);
     if(!finishGame){
         requestAnimationFrame(animate);
@@ -251,4 +248,4 @@ function animate(timeStamp){
 
 animate(0);  
 
-});
+// });
