@@ -123,6 +123,7 @@ prevSlide.addEventListener("click", function () {
   // dot.forEach(())
 });
 
+// Change slide auto
 setInterval(() => {
   if (curSlide === 0) {
     curSlide = maxSlide;
