@@ -23,7 +23,7 @@ let img_Array = [
   {
     src: "https://source.unsplash.com/random?landscape",
     alt: "image",
-  }
+  },
 ];
 
 // slide and image div
@@ -34,9 +34,7 @@ for (let i = 0; i < Slide_No; i++) {
   let element = img_Array[i];
 
   let image = document.createElement("img");
-  Object.keys(element).forEach((key) =>
-  image.setAttribute(key, element[key])
-  );
+  Object.keys(element).forEach((key) => image.setAttribute(key, element[key]));
 
   slides.appendChild(image);
   slider.appendChild(slides);
@@ -75,8 +73,8 @@ const slides = document.querySelectorAll(".slide");
 const dotted = document.querySelectorAll(".dot");
 
 slides.forEach((slide, indx) => {
-    slide.style.transform = `translateX(${indx * 100}%)`;
-  });
+  slide.style.transform = `translateX(${indx * 100}%)`;
+});
 
 // current slide counter
 let curSlide = 0;
@@ -93,7 +91,7 @@ nextSlide.addEventListener("click", function () {
     curSlide++;
   }
 
-  //   move slide by -100%
+  // move slide by -100%
   slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
   });
@@ -101,9 +99,8 @@ nextSlide.addEventListener("click", function () {
   for (i = 0; i < dotted.length; i++) {
     dotted[i].className = dotted[i].className.replace(" active", "");
   }
-  dotted[curSlide-1].className += " active";
+  dotted[curSlide - 1].className += " active";
 });
-
 
 // add event listener and navigation functionality
 prevSlide.addEventListener("click", function () {
@@ -122,15 +119,24 @@ prevSlide.addEventListener("click", function () {
   for (i = 0; i < dotted.length; i++) {
     dotted[i].className = dotted[i].className.replace(" active", "");
   }
-  dotted[curSlide-1].className += " active";
+  dotted[curSlide - 1].className += " active";
   // dot.forEach(())
 });
 
-// dots
-// const dotted = document.querySelectorAll(".dot");
+setInterval(() => {
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  }
 
-// dotted.forEach((dot, indx) => {
-//   dot.style.transform = `translateX(${indx * 100}%)`;
-//   });
+  //   move slide by 100%
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+  });
 
-
+  for (i = 0; i < dotted.length; i++) {
+    dotted[i].className = dotted[i].className.replace(" active", "");
+  }
+  dotted[curSlide - 1].className += " active";
+}, 1000);
