@@ -1,0 +1,10 @@
+canvas{
+    position: absolute;
+    border: 3px solid rgb(25, 162, 235);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /* width: 900px;
+    height: 600px; */
+    background-color: rgb(157, 168, 170);
+}
