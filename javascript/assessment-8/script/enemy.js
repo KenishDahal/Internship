@@ -1,9 +1,8 @@
 // import {collision} from "./collision.js";
-
 import { collision } from "./collision.js";
 import { cellGap, enemy, frame } from "./script.js";
-
 // import {mouse} from "./script.js";
+
 export default class Enemy {
   constructor(
     context,
@@ -18,7 +17,7 @@ export default class Enemy {
     this.y = verticalPosition;
     this.width = cellSize;
     this.height = cellSize;
-    this.speed = Math.random() * 0.2 + 0.6;
+    this.speed = Math.random() * 0.5 + 0.6;
     this.movement = this.speed;
     this.health = 100;
     this.enemyImg = enemyImg[Math.floor(Math.random() * enemyImg.length)];
@@ -45,17 +44,13 @@ export default class Enemy {
       this.width + 20,
       this.height + 20
     );
-    // if(collision(this,mouse)){
-    //   this.context.strokeStyle = "blue";
-    //   this.context.strokeRect(this.x,this.y,this.width,this.height)
-    // }
   }
+
   update() {
     this.x -= this.movement;
     if (frame % 10 === 0) {
       if (this.frameX > this.minFrame) this.frameX--;
       else this.frameX = this.maxFrame;
     }
-    // if(collision(enemy, ))
   }
 }

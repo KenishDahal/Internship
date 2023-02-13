@@ -4,7 +4,5 @@ canvas{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    /* width: 900px;
-    height: 600px; */
-    background-color: rgb(157, 168, 170);
+    background-image: url("../assets/bg-grass.avif");
 }

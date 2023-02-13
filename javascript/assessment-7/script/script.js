@@ -19,7 +19,7 @@ backgroundImage.src = "assets/background-flappy.png";
 pipeImageDown.src = "assets/pipe-2.png";
 pipeImageUp.src = "assets/pipe-1.png";
 groundImage.src = "assets/ground.png";
-birdImage.src = "assets/bluebird.png";
+birdImage.src = "assets/blackbird.png";
 gameOverImage.src = "assets/scoreBoard.png";
 tapTapImage.src = "assets/tap.jpeg";
 getReadyImage.src = "assets/getReadyImage.png";
@@ -35,7 +35,7 @@ canvas.addEventListener("click", function (e) {
       break;
 
     case state.gameOver:
-      birds.speed  = 0;
+      birds.speed = 0;
       pipes.reset();
       score.reset();
       state.currentState = state.getReady;
@@ -245,7 +245,7 @@ class Pipe {
 
       // collision between Bird and Pipe
 
-         /** assigning y-axis value of lower pipe to bottomPipeY */
+      /** assigning y-axis value of lower pipe to bottomPipeY */
       let bottomPipeY = this.pipe[i].y + pipes.height + pipes.const;
 
       if (
@@ -254,9 +254,7 @@ class Pipe {
         birds.y + birds.width > this.pipe[i].y &&
         birds.y < this.pipe[i].y + this.height
       ) {
-
         state.currentState = state.gameOver;
-      
       }
       if (
         birds.x + birds.width > this.pipe[i].x &&
@@ -264,9 +262,7 @@ class Pipe {
         birds.y + birds.width > bottomPipeY &&
         birds.y < bottomPipeY + this.height
       ) {
- 
         state.currentState = state.gameOver;
-   
       }
       // if pipe passes canvas width, score is added and pipe is deleted
       if (this.pipe[i].x + this.width < 0) {
@@ -303,7 +299,7 @@ class Bird {
   draw() {
     ctx.drawImage(birdImage, this.x, this.y, this.width, this.height);
   }
-  
+
   // Only jump when it is in game state, as mentioned in clickEvent
   fly() {
     this.speed = -this.jump;
@@ -313,7 +309,7 @@ class Bird {
     if (state.currentState == state.getReady) {
       this.x = 100;
       this.y = 100;
-      birdImage.src = "assets/bluebird.png";
+      birdImage.src = "assets/blackbird.png";
     } else {
       this.speed += this.gravity;
       this.y += this.speed;
@@ -327,11 +323,10 @@ class Bird {
     if (state.currentState === state.gameOver) {
       birdImage.src = "assets/red-bird.png";
     }
-    // blue bird when game is on playing mode
+    // black bird when game is on playing mode
     if (state.currentState === state.game) {
-      birdImage.src = "assets/bluebird.png";
+      birdImage.src = "assets/blackbird.png";
     }
-
   }
 }
 
