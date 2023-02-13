@@ -66,6 +66,16 @@ ready.src = "assets/ready.png";
 export let coin = new Image();
 coin.src = "assets/coin-removebg.png";
 
+// Audio
+export let shot = new Audio();
+shot.src = "assets/shot.mp3";
+
+let click = new Audio();
+click.src = "assets/click.mp3";
+
+let wrongPlace = new Audio();
+wrongPlace.src = "assets/wrong-place.mp3";
+
 // Mouse
 export let mouse = {
   x: undefined,
@@ -171,6 +181,7 @@ function fitShootDown() {
     //  if(shootDirection){
     shootDown[i].update();
     shootDown[i].draw();
+    
     //  }
 
     if (shootDown[i] && shootDown[i].x > canvas.width - cellSize) {
@@ -351,12 +362,12 @@ function savioursCard() {
     cardStroke1 = "black";
     cardStroke2 = "gold";
     cardStroke3 = "gold";
-    cardStroke4 = "gold";
   } else if (chooseSaviour === 2) {
     cardStroke2 = "black";
     cardStroke1 = "gold";
     cardStroke3 = "gold";
     cardStroke4 = "gold";
+    // click.play();
   } else if (chooseSaviour === 3) {
     cardStroke2 = "gold";
     cardStroke1 = "gold";
@@ -464,6 +475,7 @@ function animate() {
   fitGameSaviour();
   fitShootDown();
   fitEnemy();
+  wrongPlace.play();
   savioursCard();
   fitMoney();
   fitGameSaviourStatus();

@@ -1,3 +1,5 @@
+// import { shot } from "./script";
+
 export default class ShootDown {
   constructor(context, cellSize, x, y) {
     this.context = context;
@@ -14,6 +16,7 @@ export default class ShootDown {
     this.context.beginPath();
     this.context.arc(this.x + 60, this.y + 45, 7, 0, Math.PI * 2);
     this.context.fill();
+   
   }
 
   update() {

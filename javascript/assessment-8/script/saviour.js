@@ -10,6 +10,7 @@ import {
   noOfResources,
   saviours,
   shootDown,
+  shot,
 } from "./script.js";
 import ShootDown from "./shootDown.js";
 
@@ -113,14 +114,17 @@ export default class Saviours {
         this.minFrame = 0;
         this.maxFrame = 6;
       }
+    
     } else if (this.chooseSaviour === 2) {
       if (this.shootDirection) {
         this.minFrame = 12;
         this.maxFrame = 19;
+        
       } else {
         this.minFrame = 0;
         this.maxFrame = 8;
       }
+     
     } else if (this.chooseSaviour === 3) {
       if (this.health < 20) {
         this.minFrame = 3;
@@ -144,6 +148,7 @@ export default class Saviours {
     if (this.shootDirection && this.shootNow) {
       shootDown.push(new ShootDown(this.context, this.width, this.x, this.y));
       this.shootNow = false;
+      shot.play();
     }
   }
 }
