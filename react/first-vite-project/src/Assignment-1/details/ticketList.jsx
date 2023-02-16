@@ -106,7 +106,7 @@ export const list = [
     buttonClassName: "green",
     buttonSituation: "Normal",
     src: logo,
-  }
+  },
 ];
 
 const Detail = ({ Ticketdetails, TicketdetailsUpdate, src, imageDisplay }) => {
@@ -117,8 +117,12 @@ const Detail = ({ Ticketdetails, TicketdetailsUpdate, src, imageDisplay }) => {
           <img src={src}></img>
         </figure>
         <div className="table__info__main--body--tr__td--ticketDetails">
-          <div className="table__info__main--body--tr__td--ticketDetails--upper">{Ticketdetails}</div>
-          <div className="table__info__main--body--tr__td--ticketDetails--lower">{TicketdetailsUpdate}</div>
+          <div className="table__info__main--body--tr__td--ticketDetails--upper">
+            {Ticketdetails}
+          </div>
+          <div className="table__info__main--body--tr__td--ticketDetails--lower">
+            {TicketdetailsUpdate}
+          </div>
         </div>
       </div>
     </td>
@@ -126,7 +130,6 @@ const Detail = ({ Ticketdetails, TicketdetailsUpdate, src, imageDisplay }) => {
 };
 
 function DetailRow() {
-
   let [deleteInfo, setdeleteInfo] = useState(list);
   const deleteInformation = (id) => {
     // console.log(id)
@@ -135,12 +138,11 @@ function DetailRow() {
     // copy.splice(id, 1);
     // // console.log(rr);
     // setdeleteInfo(copy);
-    setdeleteInfo(current => 
-            current.filter(ticket => {
-                return ticket.id !== id;
-            })    
-        )
-
+    setdeleteInfo((current) =>
+      current.filter((ticket) => {
+        return ticket.id !== id;
+      })
+    );
   };
 
   return (
@@ -151,7 +153,6 @@ function DetailRow() {
             Ticketdetails={item.Ticketdetails}
             TicketdetailsUpdate={item.TicketdetailsUpdate}
             src={item.src}
-            
           />
           <Detail
             Ticketdetails={item.Customername}
@@ -164,16 +165,16 @@ function DetailRow() {
             imageDisplay="d-none"
           />
           <td>
-          <Button
-            text={item.buttonSituation}
-            className={item.buttonClassName}
-          />
+            <Button
+              text={item.buttonSituation}
+              className={item.buttonClassName}
+            />
           </td>
-          
+
           <td>
-           <div className="table__info__main--body--tr__button" >
-           <button onClick={() => deleteInformation(item.id)}>Delete</button>
-           </div>
+            <div className="table__info__main--body--tr__button">
+              <button onClick={() => deleteInformation(item.id)}>Delete</button>
+            </div>
           </td>
         </tr>
       ))}

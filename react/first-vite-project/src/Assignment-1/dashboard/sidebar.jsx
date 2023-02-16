@@ -18,8 +18,7 @@ function Sidebar() {
     },
     {
       name: "Tickets",
-      icon: "icon-ticket"
-      
+      icon: "icon-ticket",
     },
     {
       name: "Ideas",
@@ -27,7 +26,7 @@ function Sidebar() {
     },
     {
       name: "Contacts",
-      icon: "icon-group"
+      icon: "icon-group",
     },
     {
       name: "Agents",
@@ -56,13 +55,15 @@ function Sidebar() {
         <div className="sidebar__top--title">Dashboard Kit</div>
       </div>
       <div className="sidebar__menu">
-      {webItems.map((item, index) => (
-        <div className="sidebar__menu__tab" key={index}>
-          <div className="sidebar__menu__tab--icon"><i className={item.icon}/></div>
-          <div className="sidebar__menu__tab--link">{item.name}</div>
-        </div>
-       ))}
-       </div>
+        {webItems.map((item, index) => (
+          <div className="sidebar__menu__tab" key={index}>
+            <div className="sidebar__menu__tab--icon">
+              <i className={item.icon} />
+            </div>
+            <div className="sidebar__menu__tab--link">{item.name}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

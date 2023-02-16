@@ -28,11 +28,11 @@ function Header() {
 
   const openNotification = () => {
     setNotificationIsOpen(true);
-}
+  };
 
-const closeNotification = () => {
+  const closeNotification = () => {
     setNotificationIsOpen(false);
-}
+  };
 
   return (
     <div className="table__header">
@@ -42,9 +42,15 @@ const closeNotification = () => {
           <input className={search ? "display" : "none"} />
           <AiOutlineSearch onClick={displaySearch} />
           <i className="icon-notification" onClick={openNotification} />
-          <Modal className="modal" ariaHideApp={false} isOpen={notificationIsOpen}>
+          <Modal
+            className="modal"
+            ariaHideApp={false}
+            isOpen={notificationIsOpen}
+          >
             <div>You have new session today</div>
-             <button className="modal--button" onClick={closeNotification}>Close</button>
+            <button className="modal--button" onClick={closeNotification}>
+              Close
+            </button>
           </Modal>
         </div>
         <div className="table__header__rightSide--line"></div>
@@ -52,15 +58,22 @@ const closeNotification = () => {
 
         <div>
           <img src={logo} onClick={openModal}></img>
-          <Modal className="modal" ariaHideApp={false} isOpen={modalIsOpen} onRequestClose={closeModal}>
-            <form className="modal--form"> 
-            <img src={logo}></img>
-            <div>Id:{list[0].id}</div>
-            <div>{list[0].Ticketdetails}</div>
-            <div>{list[0].Customername}</div>
-            <div>{list[0].CustomernameDate}</div>
+          <Modal
+            className="modal"
+            ariaHideApp={false}
+            isOpen={modalIsOpen}
+            onRequestClose={closeModal}
+          >
+            <form className="modal--form">
+              <img src={logo}></img>
+              <div>Id:{list[0].id}</div>
+              <div>{list[0].Ticketdetails}</div>
+              <div>{list[0].Customername}</div>
+              <div>{list[0].CustomernameDate}</div>
             </form>
-            <button className="modal--button" onClick={closeModal}>close</button>
+            <button className="modal--button" onClick={closeModal}>
+              close
+            </button>
           </Modal>
         </div>
       </div>

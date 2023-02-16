@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import React from 'react';
-import "./button.scss"
+import { useState } from "react";
+import React from "react";
+import "./button.scss";
 
-function Button({className,text}) {
+function Button({ className, text }) {
+  return (
+    <div className="button">
+      <button className={className}>{text}</button>
+    </div>
+  );
+}
 
-    return (
-      <div className='button'>
-       <button className={className}>{text}</button>
-      </div>
-    )}
-    
-    export default Button;
+export default Button;
