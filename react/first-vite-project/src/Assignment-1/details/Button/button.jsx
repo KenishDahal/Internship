@@ -5,9 +5,9 @@ import "./button.scss"
 function Button({className,text}) {
 
     return (
-      <td>
+      <div className='button'>
        <button className={className}>{text}</button>
-      </td>
+      </div>
     )}
     
     export default Button;

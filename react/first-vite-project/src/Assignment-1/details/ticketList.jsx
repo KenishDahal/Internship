@@ -25,7 +25,7 @@ export const list = [
   },
   {
     id: 1,
-    Ticketdetails: "bbbbbbb Email not Linked",
+    Ticketdetails: "Adding Images to Featured Posts",
     TicketdetailsUpdate: "Updated 1 day ago",
     Customername: "Matt Damon",
     CustomernameDate: "on 24.05.2019",
@@ -37,7 +37,7 @@ export const list = [
   },
   {
     id: 2,
-    Ticketdetails: "Contact Email not Linked",
+    Ticketdetails: "When will I be charged this month?",
     TicketdetailsUpdate: "Updated 1 day ago",
     Customername: "Robert Downey",
     CustomernameDate: "on 24.05.2019",
@@ -49,8 +49,8 @@ export const list = [
   },
   {
     id: 3,
-    Ticketdetails: "Contact Email not Linked",
-    TicketdetailsUpdate: "Updated 1 day ago",
+    Ticketdetails: "Payment not going through",
+    TicketdetailsUpdate: "Updated 2 day ago",
     Customername: "Christian Bale",
     CustomernameDate: "on 24.05.2019",
     Date: "May 26, 2019",
@@ -61,7 +61,7 @@ export const list = [
   },
   {
     id: 4,
-    Ticketdetails: "Contact Email not Linked",
+    Ticketdetails: "Unable to add replies",
     TicketdetailsUpdate: "Updated 1 day ago",
     Customername: "Henry Cavil",
     CustomernameDate: "on 24.05.2019",
@@ -73,38 +73,38 @@ export const list = [
   },
   {
     id: 5,
-    Ticketdetails: "Contact Email not Linked",
+    Ticketdetails: "Downtime since last week",
     TicketdetailsUpdate: "Updated 1 day ago",
     Customername: "Chris Evans",
     CustomernameDate: "on 24.05.2019",
     Date: "May 26, 2019",
     DateClock: "6:30 PM",
-    buttonClassName: "red",
-    buttonSituation: "HIGH",
+    buttonClassName: "green",
+    buttonSituation: "Normal",
     src: logo,
   },
   {
     id: 6,
-    Ticketdetails: "Contact Email not Linked",
-    TicketdetailsUpdate: "Updated 1 day ago",
+    Ticketdetails: "Referral Bonus",
+    TicketdetailsUpdate: "Updated 4 day ago",
     Customername: "Sam Smith",
     CustomernameDate: "on 24.05.2019",
     Date: "May 26, 2019",
     DateClock: "6:30 PM",
-    buttonClassName: "red",
-    buttonSituation: "HIGH",
+    buttonClassName: "yellow",
+    buttonSituation: "Low",
     src: logo,
   },
   {
     id: 7,
-    Ticketdetails: "Contact Email not Linked",
-    TicketdetailsUpdate: "Updated 1 day ago",
+    Ticketdetails: "How do I change my password?",
+    TicketdetailsUpdate: "Updated 6 day ago",
     Customername: "Steve Rogers",
     CustomernameDate: "on 24.05.2019",
     Date: "May 26, 2019",
     DateClock: "6:30 PM",
-    buttonClassName: "red",
-    buttonSituation: "HIGH",
+    buttonClassName: "green",
+    buttonSituation: "Normal",
     src: logo,
   }
 ];
@@ -116,9 +116,9 @@ const Detail = ({ Ticketdetails, TicketdetailsUpdate, src, imageDisplay }) => {
         <figure className={`${imageDisplay}`}>
           <img src={src}></img>
         </figure>
-        <div>
-          <div className="icon">{Ticketdetails}</div>
-          <div className="link_items">{TicketdetailsUpdate}</div>
+        <div className="table__info__main--body--tr__td--ticketDetails">
+          <div className="table__info__main--body--tr__td--ticketDetails--upper">{Ticketdetails}</div>
+          <div className="table__info__main--body--tr__td--ticketDetails--lower">{TicketdetailsUpdate}</div>
         </div>
       </div>
     </td>
@@ -151,6 +151,7 @@ function DetailRow() {
             Ticketdetails={item.Ticketdetails}
             TicketdetailsUpdate={item.TicketdetailsUpdate}
             src={item.src}
+            
           />
           <Detail
             Ticketdetails={item.Customername}
@@ -162,12 +163,17 @@ function DetailRow() {
             TicketdetailsUpdate={item.DateClock}
             imageDisplay="d-none"
           />
+          <td>
           <Button
             text={item.buttonSituation}
             className={item.buttonClassName}
           />
+          </td>
+          
           <td>
+           <div className="table__info__main--body--tr__button" >
            <button onClick={() => deleteInformation(item.id)}>Delete</button>
+           </div>
           </td>
         </tr>
       ))}

@@ -34,10 +34,17 @@
     &__menu{
         margin-block: 44px;
         &__tab{
-            padding: 32px;
+            padding: 17px 32px 17px 32px ;
             display: flex;
             gap: 24px;
-            color: #A4A6B3;    
+            color: #A4A6B3; 
+            &:nth-child(6)  {
+                padding-bottom: 34px;
+            }
+            &:nth-child(7)  {
+                padding-top: 34px;
+                border-top: 1px solid #DFE0EB
+            }
            &:hover {
                 color:  #DDE2FF;
                 background: #9FA2B4;
