@@ -6,8 +6,10 @@ import logo from "../../assets/man.png";
 import "./header.scss";
 import Modal from "react-modal";
 import { list } from "../../pages/table";
+import "../Button/button.scss";
+import { Link } from "react-router-dom";
 
-function Header({show,setShow}) {
+function Header({ show, setShow }) {
   let [search, setSearch] = useState(false);
 
   function displaySearch() {
@@ -48,13 +50,15 @@ function Header({show,setShow}) {
   // };
   // let [show, setShow] = useState('');
 
-
   return (
     <div className="table__header">
       <div className="table__header--name">Tickets</div>
       <div className="table__header__rightSide">
         <div className="table__header__rightSide--icon">
-          <input className={search ? "display" : "none"} onChange={(e) => setShow(e.target.value)}/>
+          <input
+            className={search ? "display" : "none"}
+            onChange={(e) => setShow(e.target.value)}
+          />
           <AiOutlineSearch onClick={displaySearch} />
           <i className="icon-notification" onClick={openNotification} />
           <Modal
@@ -70,7 +74,11 @@ function Header({show,setShow}) {
         </div>
         <div className="table__header__rightSide--line"></div>
         <div className="table__header__rightSide--name">Jones Ferdinand</div>
-
+        <Link to="/signup" className="button">
+          <button style={{ height: "90px", width: "90px", background: "blue" }}>
+            Signup
+          </button>
+        </Link>
         <div>
           <img src={logo} onClick={openModal}></img>
           <Modal

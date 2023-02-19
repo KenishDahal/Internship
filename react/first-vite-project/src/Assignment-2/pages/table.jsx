@@ -4,7 +4,6 @@ import DetailRow from "../details/ticketList";
 import "./table.scss";
 import logo from "../assets/man.png";
 import Header from "../details/Header/header";
-import { createContext } from 'react';
 
 export const tableName = [
   "Ticket details",
@@ -84,7 +83,7 @@ export const list = [
     Date: "May 26, 2019",
     DateClock: "6:30 PM",
     buttonClassName: "green",
-    buttonSituation: "NORMAL",
+    buttonSituation: "Normal",
     src: logo,
   },
   {
@@ -108,18 +107,14 @@ export const list = [
     Date: "May 26, 2019",
     DateClock: "6:30 PM",
     buttonClassName: "green",
-    buttonSituation: "NORMAL",
+    buttonSituation: "Normal",
     src: logo,
   },
 ];
 
-export const Context = createContext("");
-
 function Table() {
   let [usersDetail, setUsersDetail] = useState(list);
-
   let [show, setShow] = useState("");
-  // const Context = createContext("");
 
   let [display, setDisplay] = useState(false);
 
@@ -130,6 +125,13 @@ function Table() {
   }
 
   function showFilterButton(e) {
+    // let vvv = e.target.value
+
+    // setUsersDetail(current =>
+    //   current.filter(ticket =>
+    //        ticket.buttonSituation === vvv
+    //   )    )
+
     setPriority(e.target.value);
   }
 
@@ -179,16 +181,12 @@ function Table() {
             </tr>
           </thead>
           <tbody className="table__info__main--body">
-          <Context.Provider value={show}>
-
             <DetailRow
               usersDetail={usersDetail}
               setUsersDetail={setUsersDetail}
-              // show={show}
+              show={show}
               priority={priority}
             />
-
-          </Context.Provider>
           </tbody>
         </table>
       </div>

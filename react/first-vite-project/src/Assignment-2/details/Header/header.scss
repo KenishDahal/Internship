@@ -1,0 +1,38 @@
+input{
+    width: 300px;
+    height: 20px;
+}
+.display{
+display: block;
+}
+.none{
+    display: none;
+}
+
+.table__header__rightSide--line{
+    width: 3px;
+    height: 20px;
+    background-color: silver;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    width: 40%;
+    height: 100vh;
+    color: white;
+    align-items: center;
+    position: relative;
+    left: 60%;
+    background-color: black;
+    &--form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &--button{
+        background-color: red;
+    }
+}
