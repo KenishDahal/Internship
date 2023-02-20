@@ -19,15 +19,13 @@ display: block;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
     gap: 30px;
     width: 40%;
     height: 100vh;
     color: white;
     align-items: center;
-    // position: relative;
+    position: relative;
     left: 60%;
-    top: 0%;
     background-color: black;
     &--form{
         display: flex;

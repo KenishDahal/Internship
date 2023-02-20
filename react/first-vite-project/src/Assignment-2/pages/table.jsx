@@ -4,6 +4,7 @@ import DetailRow from "../details/ticketList";
 import "./table.scss";
 import logo from "../assets/man.png";
 import Header from "../details/Header/header";
+import { createContext } from 'react';
 
 export const tableName = [
   "Ticket details",
@@ -112,8 +113,12 @@ export const list = [
   },
 ];
 
+export const SearchContext = createContext("");
+
 function Table() {
+
   let [usersDetail, setUsersDetail] = useState(list);
+
   let [show, setShow] = useState("");
 
   let [display, setDisplay] = useState(false);
@@ -126,12 +131,10 @@ function Table() {
 
   function showFilterButton(e) {
     // let vvv = e.target.value
-
     // setUsersDetail(current =>
     //   current.filter(ticket =>
     //        ticket.buttonSituation === vvv
     //   )    )
-
     setPriority(e.target.value);
   }
 
@@ -180,13 +183,16 @@ function Table() {
               ))}
             </tr>
           </thead>
-          <tbody className="table__info__main--body">
-            <DetailRow
+          <tbody className="table__info__main--body"> 
+          <SearchContext.Provider value={show}>
+          <DetailRow
               usersDetail={usersDetail}
               setUsersDetail={setUsersDetail}
-              show={show}
+              // show={show}
               priority={priority}
             />
+          </SearchContext.Provider>
+
           </tbody>
         </table>
       </div>

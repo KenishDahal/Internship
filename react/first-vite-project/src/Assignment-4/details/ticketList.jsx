@@ -2,12 +2,8 @@ import { useState } from "react";
 import React from "react";
 import Button from "./Button/button";
 import logo from "../assets/man.png";
-import { useContext } from 'react';
-
 
 const Detail = ({ Ticketdetails, TicketdetailsUpdate, src, imageDisplay }) => {
-  const show = useContext(SearchContext);
- 
   return (
     <td>
       <div className="table__info__main--body--tr__td">
@@ -27,7 +23,7 @@ const Detail = ({ Ticketdetails, TicketdetailsUpdate, src, imageDisplay }) => {
   );
 };
 
-function DetailRow({ usersDetail, setUsersDetail, priority }) {
+function DetailRow({ usersDetail, setUsersDetail, show, priority }) {
   // let [deleteInfo, setdeleteInfo] = useState(list);
   const deleteInformation = (id) => {
     setUsersDetail((current) =>

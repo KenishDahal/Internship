@@ -36,13 +36,32 @@ function Header({ show, setShow }) {
     setNotificationIsOpen(false);
   };
 
-
+  // const filterBySearch = (event) => {
+  //   // Access input value
+  //   let query = event.target.value;
+  //   // Create copy of item list
+  //   let updatedList = [...usersDetail];
+  //   // Include all elements which includes the search query
+  //   updatedList = updatedList.filter((item) => {
+  //     return item !== -1;
+  //   });
+  //   // Trigger render with updated values
+  //   setUsersDetail(updatedList);
+  // };
+  // let [show, setShow] = useState('');
 
   return (
     <div className="table__header">
       <div className="table__header--name">Tickets</div>
       <div className="table__header__rightSide">
-      { notificationIsOpen && <div
+        <div className="table__header__rightSide--icon">
+          <input
+            className={search ? "display" : "none"}
+            onChange={(e) => setShow(e.target.value)}
+          />
+          <AiOutlineSearch onClick={displaySearch} />
+          <i className="icon-notification" onClick={openNotification} />
+          <Modal
             className="modal"
             ariaHideApp={false}
             isOpen={notificationIsOpen}
@@ -51,15 +70,7 @@ function Header({ show, setShow }) {
             <button className="modal--button" onClick={closeNotification}>
               Close
             </button>
-          </div>
-}
-        <div className="table__header__rightSide--icon">
-          <input
-            className={search ? "display" : "none"}
-            onChange={(e) => setShow(e.target.value)}
-          />
-          <AiOutlineSearch onClick={displaySearch} />
-          <i className="icon-notification" onClick={openNotification} />
+          </Modal>
         </div>
         <div className="table__header__rightSide--line"></div>
         <div className="table__header__rightSide--name">Jones Ferdinand</div>

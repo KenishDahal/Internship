@@ -2,8 +2,7 @@ import { useState } from "react";
 import React from "react";
 import Button from "./Button/button";
 import logo from "../assets/man.png";
-import { useContext } from 'react';
-import { Context } from "../pages/table";
+// import { Context } from "../pages/table";
 
 const Detail = ({ Ticketdetails, TicketdetailsUpdate, src, imageDisplay }) => {
   return (
@@ -21,9 +20,9 @@ const Detail = ({ Ticketdetails, TicketdetailsUpdate, src, imageDisplay }) => {
   );
 };
 
-function DetailRow({usersDetail,setUsersDetail, priority}) {
+function DetailRow({usersDetail,setUsersDetail, priority,show,setShow}) {
 
-  const show = useContext(Context);
+  // const show = useContext(Context);
 
   // let [deleteInfo, setdeleteInfo] = useState(list);
   const deleteInformation = (id) => {

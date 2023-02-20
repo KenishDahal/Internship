@@ -12,7 +12,7 @@
   }
   
   
-  .first-cursor{
+  .first{
     background:red;
     border-radius:black;
     position: absolute;
@@ -24,7 +24,7 @@
     cursor: default; 
   }
   
-  .second-cursor{
+  .second{
     width: 50px;
     height: 50px;
     background:pink;
@@ -36,7 +36,7 @@
     cursor: default; 
   }
   
-  .third-cursor{
+  .third{
     background:gold;
     border-radius:black;
     position: absolute;
@@ -48,7 +48,7 @@
     cursor: default; 
   }
   
-  .fourth-cursor{
+  .fourth{
     width: 50px;
     height: 50px;
     background:greenyellow;

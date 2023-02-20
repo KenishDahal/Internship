@@ -83,7 +83,7 @@ export const list = [
     Date: "May 26, 2019",
     DateClock: "6:30 PM",
     buttonClassName: "green",
-    buttonSituation: "NORMAL",
+    buttonSituation: "Normal",
     src: logo,
   },
   {
@@ -107,18 +107,13 @@ export const list = [
     Date: "May 26, 2019",
     DateClock: "6:30 PM",
     buttonClassName: "green",
-    buttonSituation: "NORMAL",
+    buttonSituation: "Normal",
     src: logo,
   },
 ];
 
-
-// const Context = createContext("");
-
 function Table() {
-
   let [usersDetail, setUsersDetail] = useState(list);
-
   let [show, setShow] = useState("");
 
   let [display, setDisplay] = useState(false);
@@ -130,6 +125,13 @@ function Table() {
   }
 
   function showFilterButton(e) {
+    // let vvv = e.target.value
+
+    // setUsersDetail(current =>
+    //   current.filter(ticket =>
+    //        ticket.buttonSituation === vvv
+    //   )    )
+
     setPriority(e.target.value);
   }
 
@@ -179,15 +181,12 @@ function Table() {
             </tr>
           </thead>
           <tbody className="table__info__main--body">
-
             <DetailRow
               usersDetail={usersDetail}
               setUsersDetail={setUsersDetail}
+              show={show}
               priority={priority}
-              show ={show}
-              setShow = {setShow}
             />
-
           </tbody>
         </table>
       </div>

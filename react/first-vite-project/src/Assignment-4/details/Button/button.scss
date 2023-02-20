@@ -1,0 +1,27 @@
+.button {
+  padding-left: 32px;
+  align-items: end;
+  button {
+    text-decoration: none;
+    border-style: none;
+    padding: 5px 12px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 100px;
+    background-color: black;
+  }
+  .green {
+    background-color: green;
+  }
+  .yellow {
+    background-color: yellow;
+  }
+  .red {
+    background-color: red;
+  }
+  
+}
+
