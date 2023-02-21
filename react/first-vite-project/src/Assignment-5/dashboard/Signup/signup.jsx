@@ -1,9 +1,10 @@
 import { useState } from "react";
 import React, { Component } from "react";
 import "./signup.scss";
-import logo from "../../assets/D.png";
+import logo from "../../../../public/assets/D.png";
 import { BsEyeSlash } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import useSignup from "./useSignup";
 
 function Signup() {
   let [signupFormData, setSignupFormData] = useState({
@@ -12,6 +13,8 @@ function Signup() {
     password: "",
     confirmPassword: "",
   });
+
+  let {usersRegistration,addRegistration} = useSignup();
 
   const handleChange = (e) => {
     setSignupFormData({
@@ -22,6 +25,7 @@ function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    addRegistration(signupFormData);
     console.log(signupFormData);
   };
 
@@ -43,6 +47,7 @@ function Signup() {
             <input
               name="fullName"
               placeholder="Fullname"
+              value={signupFormData.fullName}
               onChange={handleChange}
             />
           </div>
@@ -51,8 +56,11 @@ function Signup() {
             <label htmlFor="email">EMAIL</label>
             <input
               name="email"
+              type="text"
               placeholder="Email address"
               onChange={handleChange}
+              value={signupFormData.email}
+              required
             />
           </div>
 
@@ -60,8 +68,11 @@ function Signup() {
             <label htmlFor="password">Password </label>
             <input
               name="password"
+              type="text"
               placeholder="Password"
               onChange={handleChange}
+              value={signupFormData.password}
+              required
             />
             <div className="form__page__mainArea__inputHandle--icon">
               <BsEyeSlash />
@@ -72,15 +83,18 @@ function Signup() {
             <label htmlFor="password">CONFIRM PASSWORD</label>
             <input
               name="confirmPassword"
+              type="text"
               placeholder="Confirm Password"
               onChange={handleChange}
+              value={signupFormData.confirmPassword}
+              required
             />
             <div className="form__page__mainArea__inputHandle--icon">
               <BsEyeSlash />
             </div>
           </div>
 
-          <button onClick={handleSubmit}>Log in</button>
+          <button type="submit" onClick={handleSubmit}>Log in</button>
 
           <div className="form__page__mainArea__signin">
             <div>Don’t have an account?</div>

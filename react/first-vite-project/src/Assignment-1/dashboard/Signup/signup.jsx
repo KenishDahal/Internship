@@ -5,39 +5,39 @@ import logo from "../../assets/D.png";
 import { BsEyeSlash } from "react-icons/bs";
 
 function Signup() {
-  let [formData, setFormData] = useState({
-    fullName:"",
+  let [signupFormData, setSignupFormData] = useState({
+    fullName: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
+    setSignupFormData({
+      ...signupFormData,
       [e.target.name]: e.target.value.trim(),
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    console.log(signupFormData);
   };
 
   return (
     <div className="form">
       <form className="form__page">
         <div className="form__page--heading">
-        <figure>
-          <img src={logo}></img>
-        </figure>
+          <figure>
+            <img src={logo}></img>
+          </figure>
         </div>
         <div className="form__page--title">Dashboard Kit</div>
-  
+
         <div className="form__page--signup">Sign up to Dashboard Kit</div>
-    
+
         <div className="form__page__mainArea">
-        <div className="form__page__mainArea__inputHandle">
+          <div className="form__page__mainArea__inputHandle">
             <label htmlFor="email">FULLNAME</label>
             <input
               name="fullName"

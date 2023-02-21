@@ -1,29 +1,21 @@
-.loginForm {
+.form {
   width: 100%;
   height: 100vh;
   background-color: silver;
   display: flex;
   justify-content: center;
   align-items: center;
-  &__page {
+  &__page{
     display: flex;
     flex-direction: column;
     width: 380px;
-    height: 586px;
+    height: 696px;
     background: #ffffff;
     border: 1px solid #dfe0eb;
     border-radius: 8px;
     align-items: center;
     gap: 12px;
     padding-block: 40px;
-    &--label {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 20px;
-      text-align: center;
-      letter-spacing: 0.3px;
-      color: #9fa2b4;
-    }
     figure {
       display: flex;
       margin: 0;
@@ -35,7 +27,7 @@
       background-color: #3751ff;
     }
     &--title {
-      padding-bottom: 12px;
+      padding-bottom: 20px;
       font-weight: 700;
       font-size: 19px;
       line-height: 24px;
@@ -43,7 +35,7 @@
       text-align: center;
       letter-spacing: 0.4px;
     }
-    &--login {
+    &--signup {
       font-weight: 700;
       font-size: 24px;
       line-height: 30px;
@@ -54,9 +46,7 @@
     &__mainArea {
       display: flex;
       flex-direction: column;
-      gap: 24px;
-      // justify-content: center;
-      // align-items: center;
+      gap: 22px;
       color: #9fa2b4;
       padding: 24px;
       &__inputHandle {

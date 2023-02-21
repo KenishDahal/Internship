@@ -6,7 +6,7 @@ import { BsEyeSlash } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 function Signup() {
-  let [formData, setFormData] = useState({
+  let [signupFormData, setSignupFormData] = useState({
     fullName: "",
     email: "",
     password: "",
@@ -14,15 +14,15 @@ function Signup() {
   });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
+    setSignupFormData({
+      ...signupFormData,
       [e.target.name]: e.target.value.trim(),
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    console.log(signupFormData);
   };
 
   return (
