@@ -8,9 +8,12 @@ import Modal from "react-modal";
 // import { list } from "../../pages/table";
 import "../Button/button.scss";
 import { Link } from "react-router-dom";
+import useLogin from "../../dashboard/Login/useLogin";
 
 function Header({ show, setShow }) {
   let [search, setSearch] = useState(false);
+
+  let { usersLogin } = useLogin();
 
   function displaySearch() {
     setSearch(!search);
@@ -51,10 +54,10 @@ function Header({ show, setShow }) {
   // let [show, setShow] = useState('');
 
   return (
-    <div className="table__header">
-      <div className="table__header--name">Tickets</div>
-      <div className="table__header__rightSide">
-        <div className="table__header__rightSide--icon">
+    <div className="top__header">
+      <div className="top__header--name">Tickets</div>
+      <div className="top__header__rightSide">
+        <div className="top__header__rightSide--icon">
           <input
             className={search ? "display" : "none"}
             onChange={(e) => setShow(e.target.value)}
@@ -72,8 +75,8 @@ function Header({ show, setShow }) {
             </button>
           </Modal>
         </div>
-        <div className="table__header__rightSide--line"></div>
-        <div className="table__header__rightSide--name">Jones Ferdinand</div>
+        <div className="top__header__rightSide--line"></div>
+        <div className="top__header__rightSide--name">Jones Ferdinand</div>
         <Link to="/signup" className="button">
           <button style={{ height: "70px", width: "70px", background: "blue" }}>
             Signup
@@ -87,13 +90,10 @@ function Header({ show, setShow }) {
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
           >
-            {/* <form className="modal--form">
+            <form className="modal--form">
               <img src={logo}></img>
-              <div>Id:{list[0].id}</div>
-              <div>{list[0].Ticketdetails}</div>
-              <div>{list[0].Customername}</div>
-              <div>{list[0].CustomernameDate}</div>
-            </form> */}
+              <div>Tom Cruise</div>
+            </form>
             <button className="modal--button" onClick={closeModal}>
               close
             </button>

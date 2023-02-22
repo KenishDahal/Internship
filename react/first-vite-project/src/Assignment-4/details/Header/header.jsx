@@ -51,10 +51,10 @@ function Header({ show, setShow }) {
   // let [show, setShow] = useState('');
 
   return (
-    <div className="table__header">
-      <div className="table__header--name">Tickets</div>
-      <div className="table__header__rightSide">
-        <div className="table__header__rightSide--icon">
+    <div className="top__header">
+      <div className="top__header--name">Tickets</div>
+      <div className="top__header__rightSide">
+        <div className="top__header__rightSide--icon">
           <input
             className={search ? "display" : "none"}
             onChange={(e) => setShow(e.target.value)}
@@ -72,8 +72,8 @@ function Header({ show, setShow }) {
             </button>
           </Modal>
         </div>
-        <div className="table__header__rightSide--line"></div>
-        <div className="table__header__rightSide--name">Jones Ferdinand</div>
+        <div className="top__header__rightSide--line"></div>
+        <div className="top__header__rightSide--name">Jones Ferdinand</div>
         <Link to="/signup" className="button">
           <button style={{ height: "90px", width: "90px", background: "blue" }}>
             Signup

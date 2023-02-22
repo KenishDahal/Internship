@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Table from "../../../Assignment-1/pages/table";
 import "./sidebar.scss";
 import logo from "../../../../public/assets/D.png";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 function Sidebar() {
   const webItems = [
@@ -43,6 +43,7 @@ function Sidebar() {
   ];
 
   return (
+    <>
     <div className="sidebar">
       <div className="sidebar__top">
         <div className="sidebar__top--image">
@@ -61,6 +62,8 @@ function Sidebar() {
         ))}
       </div>
     </div>
+    <Outlet/>
+    </>
   );
 }
 

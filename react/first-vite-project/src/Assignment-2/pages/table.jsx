@@ -4,14 +4,13 @@ import DetailRow from "../details/ticketList";
 import "./table.scss";
 import logo from "../assets/man.png";
 import Header from "../details/Header/header";
-import { createContext } from 'react';
 
 export const tableName = [
   "Ticket details",
   "Customer name",
   "Date",
   "Priority",
-  ""
+  "",
 ];
 
 export const list = [
@@ -84,7 +83,7 @@ export const list = [
     Date: "May 26, 2019",
     DateClock: "6:30 PM",
     buttonClassName: "green",
-    buttonSituation: "Normal",
+    buttonSituation: "NORMAL",
     src: logo,
   },
   {
@@ -108,34 +107,20 @@ export const list = [
     Date: "May 26, 2019",
     DateClock: "6:30 PM",
     buttonClassName: "green",
-    buttonSituation: "Normal",
+    buttonSituation: "NORMAL",
     src: logo,
   },
 ];
 
-export const SearchContext = createContext("");
-
 function Table() {
-
   let [usersDetail, setUsersDetail] = useState(list);
 
   let [show, setShow] = useState("");
 
   let [display, setDisplay] = useState(false);
 
-  let [priority, setPriority] = useState("all");
-
   function showFilterChange() {
     setDisplay(!display);
-  }
-
-  function showFilterButton(e) {
-    // let vvv = e.target.value
-    // setUsersDetail(current =>
-    //   current.filter(ticket =>
-    //        ticket.buttonSituation === vvv
-    //   )    )
-    setPriority(e.target.value);
   }
 
   return (
@@ -152,47 +137,33 @@ function Table() {
               <div>Sort</div>
             </div>
             <div className="table__info__header__rightSide--filter">
-              <i className="icon-filter" onClick={showFilterChange} />
+              <i className="icon-filter" />
               <div>Filter</div>
             </div>
-            {display ? (
-              <div>
-                <button value="HIGH" onClick={showFilterButton}>
-                  High
-                </button>
-                <button value="LOW" onClick={showFilterButton}>
-                  lOW
-                </button>
-                <button value="NORMAL" onClick={showFilterButton}>
-                  Normal
-                </button>
-              </div>
-            ) : (
-              true
-            )}
           </div>
         </div>
 
         <table className="table__info__main">
           <thead className="table__info__main--head">
-            <tr>
+            <tr className="table__info__main--head--tr">
               {Object.values(tableName).map((value, index) => (
-                <th style={{ paddingLeft: "32px" }} key={index}>
+                <th
+                  className="table__info__main--head--tr--th"
+                  style={{ paddingLeft: "32px" }}
+                  key={index}
+                >
                   {value}
                 </th>
               ))}
             </tr>
           </thead>
-          <tbody className="table__info__main--body"> 
-          <SearchContext.Provider value={show}>
-          <DetailRow
+          <tbody className="table__info__main--body">
+            <DetailRow
               usersDetail={usersDetail}
               setUsersDetail={setUsersDetail}
-              // show={show}
-              priority={priority}
+              show={show}
+              setShow={setShow}
             />
-          </SearchContext.Provider>
-
           </tbody>
         </table>
       </div>

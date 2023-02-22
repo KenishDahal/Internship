@@ -2,7 +2,6 @@ import { useState } from "react";
 import React from "react";
 import Button from "./Button/button";
 import logo from "../assets/man.png";
-// import { Context } from "../pages/table";
 
 const Detail = ({ Ticketdetails, TicketdetailsUpdate, src, imageDisplay }) => {
   return (
@@ -20,9 +19,7 @@ const Detail = ({ Ticketdetails, TicketdetailsUpdate, src, imageDisplay }) => {
   );
 };
 
-function DetailRow({usersDetail,setUsersDetail, priority,show,setShow}) {
-
-  // const show = useContext(Context);
+function DetailRow({usersDetail,setUsersDetail,show,setShow}) {
 
   // let [deleteInfo, setdeleteInfo] = useState(list);
   const deleteInformation = (id) => {
@@ -40,12 +37,6 @@ function DetailRow({usersDetail,setUsersDetail, priority,show,setShow}) {
          return  show.toLowerCase() === ''
          ? item : item.Customername.toLowerCase().includes(show)
  
-       } ).filter((item)=>{
-          if(priority === "all"){
-            return true;
-          }else{
-            return item.buttonSituation === priority;
-          }
        })
      .map((item, index) => (
         <tr className="table__info__main--body--tr" key={index}>

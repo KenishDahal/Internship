@@ -113,8 +113,6 @@ export const list = [
 ];
 
 
-// const Context = createContext("");
-
 function Table() {
 
   let [usersDetail, setUsersDetail] = useState(list);
@@ -123,14 +121,8 @@ function Table() {
 
   let [display, setDisplay] = useState(false);
 
-  let [priority, setPriority] = useState("all");
-
   function showFilterChange() {
     setDisplay(!display);
-  }
-
-  function showFilterButton(e) {
-    setPriority(e.target.value);
   }
 
   return (
@@ -147,32 +139,19 @@ function Table() {
               <div>Sort</div>
             </div>
             <div className="table__info__header__rightSide--filter">
-              <i className="icon-filter" onClick={showFilterChange} />
+              <i className="icon-filter"/>
               <div>Filter</div>
             </div>
-            {display ? (
-              <div>
-                <button value="HIGH" onClick={showFilterButton}>
-                  High
-                </button>
-                <button value="LOW" onClick={showFilterButton}>
-                  lOW
-                </button>
-                <button value="NORMAL" onClick={showFilterButton}>
-                  Normal
-                </button>
-              </div>
-            ) : (
-              true
-            )}
           </div>
         </div>
 
         <table className="table__info__main">
           <thead className="table__info__main--head">
-            <tr>
+          <tr className="table__info__main--head--tr">
               {Object.values(tableName).map((value, index) => (
-                <th style={{ paddingLeft: "32px" }} key={index}>
+                <th
+                 className="table__info__main--head--tr--th"
+                 style={{ paddingLeft: "32px" }} key={index}>
                   {value}
                 </th>
               ))}
@@ -183,7 +162,6 @@ function Table() {
             <DetailRow
               usersDetail={usersDetail}
               setUsersDetail={setUsersDetail}
-              priority={priority}
               show ={show}
               setShow = {setShow}
             />

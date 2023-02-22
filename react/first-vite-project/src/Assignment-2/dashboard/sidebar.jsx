@@ -1,9 +1,15 @@
 import { useState } from "react";
 import React, { Component } from "react";
-import Table from "../../../Assignment-1/pages/table";
+import Table from "../../Assignment-1/pages/table";
+import { FaBeer, FaTicketAlt, FaLightbulb } from "react-icons/fa";
+import { FcNoIdea } from "react-icons/fc";
+import { BsFillPieChartFill } from "react-icons/bs";
+import { IoIosContacts } from "react-icons/io";
+import { MdEmojiPeople } from "react-icons/md";
 import "./sidebar.scss";
-import logo from "../../assets/D.png";
+import logo from "../assets/D.png";
 import { Link } from "react-router-dom";
+// import Form from './session-1/class/form'
 
 function Sidebar() {
   const webItems = [
@@ -32,9 +38,8 @@ function Sidebar() {
       icon: "icon-book",
     },
     {
-      name: "Login",
+      name: "Settings",
       icon: "icon-settings",
-      path: "/login",
     },
     {
       name: "Subscription",
@@ -56,7 +61,7 @@ function Sidebar() {
             <div className="sidebar__menu__tab--icon">
               <i className={item.icon} />
             </div>
-            <a className="sidebar__menu__tab--link">{item.name}</a>
+            <div className="sidebar__menu__tab--link">{item.name}</div>
           </div>
         ))}
       </div>

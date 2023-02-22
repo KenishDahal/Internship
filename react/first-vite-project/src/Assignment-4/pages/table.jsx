@@ -10,7 +10,7 @@ export const tableName = [
   "Customer name",
   "Date",
   "Priority",
-  ""
+  "",
 ];
 
 export const list = [
@@ -172,9 +172,13 @@ function Table() {
 
         <table className="table__info__main">
           <thead className="table__info__main--head">
-            <tr>
+            <tr className="table__info__main--head--tr">
               {Object.values(tableName).map((value, index) => (
-                <th style={{ paddingLeft: "32px" }} key={index}>
+                <th
+                  className="table__info__main--head--tr--th"
+                  style={{ paddingLeft: "32px" }}
+                  key={index}
+                >
                   {value}
                 </th>
               ))}

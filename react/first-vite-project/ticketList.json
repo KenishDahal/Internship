@@ -10,7 +10,7 @@
       "DateClock": "6:30 PM",
       "buttonClassName": "red",
       "buttonSituation": "HIGH",
-      "src": "./public/assets/man.png"
+      "src": "https://picsum.photos/id/237/200/300"
     },
     {
       "id": 1,
@@ -22,7 +22,7 @@
       "DateClock": "6:30 PM",
       "buttonClassName": "yellow",
       "buttonSituation": "LOW",
-      "src": "./public/assets/avatar.png"
+      "src": "https://picsum.photos/id/238/200/300"
     },
     {
       "id": 2,
@@ -34,7 +34,7 @@
       "DateClock": "6:30 PM",
       "buttonClassName": "red",
       "buttonSituation": "HIGH",
-      "src": "./public/assets/customer-2.png"
+      "src": "https://picsum.photos/id/239/200/300"
     },
     {
       "id": 3,
@@ -46,7 +46,7 @@
       "DateClock": "6:30 PM",
       "buttonClassName": "green",
       "buttonSituation": "NORMAL",
-      "src": "./public/assets/customer-3.png"
+      "src": "https://picsum.photos/id/240/200/300"
     },
     {
       "id": 4,
@@ -58,7 +58,7 @@
       "DateClock": "6:30 PM",
       "buttonClassName": "red",
       "buttonSituation": "HIGH",
-      "src": "./public/assets/customer-4.png"
+      "src": "https://picsum.photos/id/241/200/300"
     },
     {
       "id": 5,
@@ -70,7 +70,7 @@
       "DateClock": "6:30 PM",
       "buttonClassName": "green",
       "buttonSituation": "Normal",
-      "src": "./public/assets/customer-5.png"
+      "src": "https://picsum.photos/id/242/200/300"
     },
     {
       "id": 6,
@@ -82,7 +82,7 @@
       "DateClock": "6:30 PM",
       "buttonClassName": "red",
       "buttonSituation": "HIGH",
-      "src": "./public/assets/customer-6.png"
+      "src": "https://picsum.photos/id/243/200/300"
     },
     {
       "id": 7,
@@ -94,7 +94,7 @@
       "DateClock": "6:30 PM",
       "buttonClassName": "green",
       "buttonSituation": "Normal",
-      "src": "./public/assets/customer-7.png"
+      "src": "https://picsum.photos/id/244/200/300"
     }
   ],
   "users": [
@@ -111,6 +111,13 @@
       "password": "binaya",
       "confirmPassword": "binaya",
       "id": 2
+    },
+    {
+      "fullName": "dev",
+      "email": "dev@gmail.com",
+      "password": "dev",
+      "confirmPassword": "dev",
+      "id": 3
     }
   ]
 }

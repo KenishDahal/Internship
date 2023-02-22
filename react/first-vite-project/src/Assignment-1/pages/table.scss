@@ -1,51 +1,24 @@
 .table {
+  display: flex;
+  width: calc(100% - 255px);
+  flex-direction: column;
+  gap: 58px;
+  border-collapse: collapse;
+  padding: 30px;
+  margin-left: 255px;
+  background-color: #F7F8FC;
   img {
     border-radius: 50%;
     height: 44px;
     width: 44px;
-  }
-  display: flex;
-  width: calc(100% - 255px);
-  flex-direction: column;
-  gap: 54px;
-  border-collapse: collapse;
-  padding: 30px;
-  margin-left: 255px;
-  background-color: #e5e5e5;
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 30px;
-    &--name {
-      font-weight: 700;
-      font-size: 24px;
-      line-height: 30px;
-      letter-spacing: 0.3px;
-      color: #252733;
-    }
-    &__rightSide {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-      &--icon {
-        display: flex;
-        gap: 26px;
-      }
-      &--name {
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 20px;
-        text-align: right;
-        letter-spacing: 0.2px;
-        color: #252733;
-      }
-    }
+    object-fit: cover;
   }
   &__info {
     display: flex;
     flex-direction: column;
     gap: 42px;
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
     background-color: #fff;
     // padding: 32px;
     &__header {
@@ -66,6 +39,14 @@
         &--sort {
           display: flex;
           gap: 9px;
+          button {
+            background-color: rgb(153, 84, 84);
+            width: 60px;
+            height: 50px;
+            color: #fff;
+            border-radius: 50%;
+            border-color: black;
+          }
         }
         &--filter {
           display: flex;
@@ -83,12 +64,18 @@
         letter-spacing: 0.2px;
         color: #9fa2b4;
         &--tr {
-        //   padding-left: 300px;
+          margin-bottom: 30px;
+          border-bottom: 3px solid #dfe0eb;
+          //   padding-left: 300px;
           padding-bottom: 12px;
           &:first-child {
             padding-left: 200px;
           }
+          &--th{
+            padding-bottom: 10px;
+          }
         }
+
       }
 
       &--body {
@@ -97,6 +84,9 @@
           &__button {
             // background-color: red;
             padding-right: 32px;
+          }
+          &:first-child {
+            // border-top: 3px solid red;
           }
           &__td {
             padding-inline: 33px;
@@ -136,8 +126,9 @@
 }
 
 td {
-  border-bottom: 3px solid #dfe0eb;
+  border-top: 3px solid #dfe0eb;
 }
+
 .d-none {
   display: none;
 }

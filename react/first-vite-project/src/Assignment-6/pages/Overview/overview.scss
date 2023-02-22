@@ -1,0 +1,53 @@
+.overview{
+    display: flex;
+    width: calc(100% - 255px);
+    flex-direction: column;
+    gap: 58px;
+    padding: 30px;
+    margin-left: 255px;
+    background-color:  #F7F8FC;;
+    &__layer{
+        display: flex;
+        gap: 30px;
+        &__box{
+            width: 25%;
+            padding: 24px;
+            text-align: center;
+            background: #FFFFFF;
+            border: 1px solid #DFE0EB;
+            border-radius: 8px;
+            &:hover{
+                h2{
+                    color: #3751FF;
+                 }
+                 span{
+                    color: #3751FF;
+                 }
+            }       
+            h2{
+                font-weight: 700;
+                font-size: 19px;
+                line-height: 24px;
+                /* identical to box height */   
+                text-align: center;
+                letter-spacing: 0.4px;
+                color: #9FA2B4;        
+            }
+            span{
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 50px;
+                text-align: center;
+                letter-spacing: 1px;
+                color: #252733;          
+            }
+        }
+    }
+    &__lowerLayer{
+        height: 100vh;
+        background: #FFFFFF;
+        border: 1px solid #DFE0EB;
+        border-radius: 8px;     
+    }
+
+}

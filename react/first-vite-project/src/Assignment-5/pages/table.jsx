@@ -16,105 +16,6 @@ export const tableName = [
   "",
 ];
 
-// export const list = [
-//   {
-//     id: 0,
-//     Ticketdetails: "Contact Email not Linked",
-//     TicketdetailsUpdate: "Updated 1 day ago",
-//     Customername: "Tom Cruise",
-//     CustomernameDate: "on 24.05.2019",
-//     Date: "May 26, 2019",
-//     DateClock: "6:30 PM",
-//     buttonClassName: "red",
-//     buttonSituation: "HIGH",
-//     src: logo,
-//   },
-//   {
-//     id: 1,
-//     Ticketdetails: "Adding Images to Featured Posts",
-//     TicketdetailsUpdate: "Updated 1 day ago",
-//     Customername: "Matt Damon",
-//     CustomernameDate: "on 24.05.2019",
-//     Date: "May 26, 2019",
-//     DateClock: "6:30 PM",
-//     buttonClassName: "yellow",
-//     buttonSituation: "LOW",
-//     src: logo,
-//   },
-//   {
-//     id: 2,
-//     Ticketdetails: "When will I be charged this month?",
-//     TicketdetailsUpdate: "Updated 1 day ago",
-//     Customername: "Robert Downey",
-//     CustomernameDate: "on 24.05.2019",
-//     Date: "May 26, 2019",
-//     DateClock: "6:30 PM",
-//     buttonClassName: "red",
-//     buttonSituation: "HIGH",
-//     src: logo,
-//   },
-//   {
-//     id: 3,
-//     Ticketdetails: "Payment not going through",
-//     TicketdetailsUpdate: "Updated 2 day ago",
-//     Customername: "Christian Bale",
-//     CustomernameDate: "on 24.05.2019",
-//     Date: "May 26, 2019",
-//     DateClock: "6:30 PM",
-//     buttonClassName: "green",
-//     buttonSituation: "NORMAL",
-//     src: logo,
-//   },
-//   {
-//     id: 4,
-//     Ticketdetails: "Unable to add replies",
-//     TicketdetailsUpdate: "Updated 1 day ago",
-//     Customername: "Henry Cavil",
-//     CustomernameDate: "on 24.05.2019",
-//     Date: "May 26, 2019",
-//     DateClock: "6:30 PM",
-//     buttonClassName: "red",
-//     buttonSituation: "HIGH",
-//     src: logo,
-//   },
-//   {
-//     id: 5,
-//     Ticketdetails: "Downtime since last week",
-//     TicketdetailsUpdate: "Updated 1 day ago",
-//     Customername: "Chris Evans",
-//     CustomernameDate: "on 24.05.2019",
-//     Date: "May 26, 2019",
-//     DateClock: "6:30 PM",
-//     buttonClassName: "green",
-//     buttonSituation: "Normal",
-//     src: logo,
-//   },
-//   {
-//     id: 6,
-//     Ticketdetails: "Referral Bonus",
-//     TicketdetailsUpdate: "Updated 4 day ago",
-//     Customername: "Sam Smith",
-//     CustomernameDate: "on 24.05.2019",
-//     Date: "May 26, 2019",
-//     DateClock: "6:30 PM",
-//     buttonClassName: "red",
-//     buttonSituation: "HIGH",
-//     src: logo,
-//   },
-//   {
-//     id: 7,
-//     Ticketdetails: "How do I change my password?",
-//     TicketdetailsUpdate: "Updated 6 day ago",
-//     Customername: "Steve Rogers",
-//     CustomernameDate: "on 24.05.2019",
-//     Date: "May 26, 2019",
-//     DateClock: "6:30 PM",
-//     buttonClassName: "green",
-//     buttonSituation: "Normal",
-//     src: logo,
-//   },
-// ];
-
 function Table() {
   // let [usersDetail, setUsersDetail] = useState(list);
   let { usersDetail, setUsersDetail, getTickets, addTickets } = useTickets();
@@ -176,7 +77,7 @@ function Table() {
     // let vvv = e.target.value
 
     // setUsersDetail(current =>
-    //   current.filter(ticket =>
+    //   current.filter(ticket =>=
     //        ticket.buttonSituation === vvv
     //   )    )
 
@@ -324,7 +225,11 @@ function Table() {
           <thead className="table__info__main--head">
             <tr className="table__info__main--head--tr">
               {Object.values(tableName).map((value, index) => (
-                <th className="table__info__main--head--tr--th" style={{ paddingLeft: "32px" }} key={index}>
+                <th
+                  className="table__info__main--head--tr--th"
+                  style={{ paddingLeft: "32px" }}
+                  key={index}
+                >
                   {value}
                 </th>
               ))}

@@ -1,0 +1,133 @@
+.addTicket__page {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid #dfe0eb;
+    border-radius: 8px;
+    align-items: center;
+    gap: 5px;
+    padding-block: 40px;
+    &--label {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.3px;
+      color: #9fa2b4;
+    }
+    figure {
+      display: flex;
+      margin: 0;
+      align-items: center;
+      justify-content: space-around;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: #3751ff;
+    }
+    &--title {
+      padding-bottom: 12px;
+      font-weight: 700;
+      font-size: 19px;
+      line-height: 24px;
+      color: black;
+      text-align: center;
+      letter-spacing: 0.4px;
+    }
+    &--login {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      text-align: center;
+      letter-spacing: 0.3px;
+      color: #252733;
+    }
+    &__mainArea {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  
+      align-items: center;
+      width: 100%;
+      height: 50%;
+      color: #9fa2b4;
+      padding: 24px;
+      &__inputHandle {
+        display: flex;
+        flex-direction: column;
+        // gap: 6px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        position: relative;
+        input {
+          background: #fcfdfe;
+          border: 1px solid #f0f1f7;
+          border-radius: 8px;
+          height: 22px;
+          padding: 12px;
+        }
+        &--icon {
+          position: absolute;
+          top: 55%;
+          right: 10%;
+        }
+        ::placeholder {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.3px;
+          color: #4b506d;
+        }
+      }
+      &__checkbox {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        input {
+          width: 25px;
+          margin: 0;
+        }
+      }
+      &__signin {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        gap: 5px;
+        a {
+          color: #3751ff;
+        }
+      }
+      button {
+        font-size: 12px;
+        font-weight: 400;
+        width: 20%;
+        height: 30px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.3px;
+        color: #ffffff;
+        background: rgb(70, 54, 33);
+        box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
+        border-radius: 8px;
+      }
+    }
+  }
+
+.addModel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    align-items: center;
+    align-content: flex-start;
+    left: 0%;
+    background-color: black;}

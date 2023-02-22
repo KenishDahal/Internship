@@ -8,7 +8,7 @@ import useLogin from "./useLogin";
 import MainDashboard from "../MainDashboard";
 
 function Login() {
-  let [formData, setFormData] = useState({
+ let [formData, setFormData] = useState({
     email: "",
     password: "",
   });
@@ -26,10 +26,6 @@ function Login() {
     e.preventDefault();
     // console.log(formData);
     getLogin(formData);
-
-    // if(loggedInUser){
-    //   <Navigate to="/main" replace={true} />
-    // }
   };
 
   return (

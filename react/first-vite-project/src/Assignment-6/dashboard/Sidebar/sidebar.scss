@@ -48,9 +48,12 @@
       }
       &:hover {
         color: #dde2ff;
-        background: #9fa2b4;
+        background: hwb(1330 37% 61%);
         // opacity: 0.08;
         border-left: 3px solid #dde2ff;
+        &--link {
+          font-size: 112px;
+        }
       }
       &--icon {
         font-size: 16px;
@@ -61,7 +64,9 @@
         font-size: 16px;
         line-height: 20px;
         /* identical to box height */
+        text-decoration: none;
         letter-spacing: 0.2px;
+        color: #a4a6b3;
         /* sidebar / gray */
       }
     }

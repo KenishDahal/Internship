@@ -4,92 +4,24 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { GrNotification } from "react-icons/gr";
 import logo from "../../assets/man.png";
 import "./header.scss";
-import Modal from "react-modal";
 import { list } from "../../pages/table";
 
-function Header({show,setShow}) {
-  let [search, setSearch] = useState(false);
-
-  function displaySearch() {
-    setSearch(!search);
-    console.log(search);
-  }
-
-  const [modalIsOpen, setIsOpen] = useState(false);
+function Header({ show, setShow }) {
   const [notificationIsOpen, setNotificationIsOpen] = useState(false);
 
-  function openModal() {
-    setIsOpen(true);
-  }
-
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  const openNotification = () => {
-    setNotificationIsOpen(true);
-  };
-
-  const closeNotification = () => {
-    setNotificationIsOpen(false);
-  };
-
-  // const filterBySearch = (event) => {
-  //   // Access input value
-  //   let query = event.target.value;
-  //   // Create copy of item list
-  //   let updatedList = [...usersDetail];
-  //   // Include all elements which includes the search query
-  //   updatedList = updatedList.filter((item) => {
-  //     return item !== -1;
-  //   });
-  //   // Trigger render with updated values
-  //   setUsersDetail(updatedList);
-  // };
-  // let [show, setShow] = useState('');
-
-
   return (
-    <div className="table__header">
-      <div className="table__header--name">Tickets</div>
-      <div className="table__header__rightSide">
-        <div className="table__header__rightSide--icon">
-          <input className={search ? "display" : "none"} onChange={(e) => setShow(e.target.value)}/>
-          <AiOutlineSearch onClick={displaySearch} />
-          <i className="icon-notification" onClick={openNotification} />
-          <Modal
-            className="modal"
-            ariaHideApp={false}
-            isOpen={notificationIsOpen}
-          >
-            <div>You have new session today</div>
-            <button className="modal--button" onClick={closeNotification}>
-              Close
-            </button>
-          </Modal>
+    <div className="top__header">
+      <div className="top__header--name">Tickets</div>
+      <div className="top__header__rightSide">
+        <div className="top__header__rightSide--icon">
+          <AiOutlineSearch />
+          <i className="icon-notification" />
         </div>
-        <div className="table__header__rightSide--line"></div>
-        <div className="table__header__rightSide--name">Jones Ferdinand</div>
+        <div className="top__header__rightSide--line"></div>
+        <div className="top__header__rightSide--name">Jones Ferdinand</div>
 
         <div>
-          <img src={logo} onClick={openModal}></img>
-          <Modal
-            className="modal"
-            ariaHideApp={false}
-            isOpen={modalIsOpen}
-            onRequestClose={closeModal}
-          >
-            <form className="modal--form">
-              <img src={logo}></img>
-              <div>Id:{list[0].id}</div>
-              <div>{list[0].Ticketdetails}</div>
-              <div>{list[0].Customername}</div>
-              <div>{list[0].CustomernameDate}</div>
-            </form>
-            <button className="modal--button" onClick={closeModal}>
-              close
-            </button>
-          </Modal>
+          <img src={logo}></img>
         </div>
       </div>
     </div>
