@@ -78,8 +78,8 @@ function Header({ show, setShow }) {
         <div className="top__header__rightSide--line"></div>
         <div className="top__header__rightSide--name">Jones Ferdinand</div>
         <Link to="/signup" className="button">
-          <button style={{ height: "70px", width: "70px", background: "blue" }}>
-            Signup
+          <button style={{ height: "30px", width: "65px", background: "skyblue", padding:"0"}}>
+            Logout
           </button>
         </Link>
         <div>
