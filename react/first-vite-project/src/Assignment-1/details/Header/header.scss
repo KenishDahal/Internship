@@ -22,8 +22,24 @@
     &--icon {
       display: flex;
       gap: 26px;
+      position: relative;
+      &--notification{
+        position: relative;
+      }
+      &--mark{
+        width: 6px;
+        height: 6px;
+        left: 12.5%;
+        right: 10%;
+        top: -6.25%;
+        bottom: 68.75%;
+        border-radius: 50%;
+        background: #3751FF;
+        border: 1.5px solid #F7F8FC;
+        position: absolute;
+      }
     }
-    &--name {
+    &--names {
       font-weight: 600;
       font-size: 14px;
       line-height: 20px;

@@ -2,22 +2,30 @@ import { useEffect, useState } from "react";
 
 const useLogin = () => {
   let [usersLogin, setUsersLogin] = useState([]);
-  let [loggedInUser, setLoggedInUser] = useState(false);
+  let [passwordShown, setPasswordShown] = useState(false);
 
-  const getLogin = async (formData) => {
-    await fetch(`http://localhost:3000/users?email=${formData.email}&password=${formData.password}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.length >= 1) {
-          setLoggedInUser(true);
-          console.log(loggedInUser);
-          setUsersLogin({data})
-          console.log({data});
-        }
-      });
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
   };
 
-  return { usersLogin, getLogin,loggedInUser };
+
+  const getLogin = async () => {
+    await fetch("https://react-ticket-57733-default-rtdb.firebaseio.com/users.json")
+      .then((res) => res.json())
+      .then((data) => {
+
+            const arrFormat = Object.entries(data).map(([key,value]) => (
+              {
+                id: key,
+                ...value,
+              }
+            ))
+            console.log(arrFormat);
+          setUsersLogin(arrFormat);
+  
+        // }
+      });
+  };
+  return { usersLogin, getLogin,togglePassword ,passwordShown,setPasswordShown};
 };
 export default useLogin;

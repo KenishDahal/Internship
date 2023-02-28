@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import "./table.scss";
-import "./../addListForm/addListForm.scss";
+import "./../../pages/addListForm/addListForm.scss";
 import logo from "../../../../public/assets/man.png";
 import Header from "../../details/Header/header";
 import Modal from "react-modal";
 import useTickets from "../../details/Tickets/useTickets";
-import DetailRow from "../../../Assignment-6/details/ticketList";
-import AddListForm from "../addListForm/addListForm";
+import DetailRow from "../../details/ticketList";
+import AddListForm from "../../pages/addListForm/addListForm";
+import { Link } from "react-router-dom";
 
 export const tableName = [
   "Ticket details",
@@ -18,8 +19,9 @@ export const tableName = [
 ];
 
 function Table() {
-  // let [usersDetail, setUsersDetail] = useState(list);
-  let { usersDetail, setUsersDetail, getTickets, addTickets } = useTickets();
+  
+  let { usersDetail, setUsersDetail, getTickets, addTickets, deleteTickets } =
+    useTickets();
 
   useEffect(() => {
     getTickets();
@@ -48,8 +50,21 @@ function Table() {
   function onSubmitting(e) {
     e.preventDefault();
     console.log(addticketList);
-    // setCustomername("");
+
     addTickets(addticketList);
+
+    setAddTicketList({
+      id: "",
+      Ticketdetails: "",
+      TicketdetailsUpdate: "",
+      Customername: "",
+      CustomernameDate: "",
+      Date: "",
+      DateClock: "",
+      buttonClassName: "",
+      buttonSituation: "",
+      src: ""
+    })
 
     console.log(usersDetail);
   }
@@ -75,19 +90,12 @@ function Table() {
   }
 
   function showFilterButton(e) {
-    // let vvv = e.target.value
-
-    // setUsersDetail(current =>
-    //   current.filter(ticket =>=
-    //        ticket.buttonSituation === vvv
-    //   )    )
-
     setPriority(e.target.value);
   }
 
   return (
     <div className="table">
-      <Header show={show} setShow={setShow} text="Tickets"/>
+      <Header show={show} setShow={setShow} text="Tickets" />
 
       {/* Table starts here */}
       <div className="table__info">
@@ -155,6 +163,7 @@ function Table() {
               setUsersDetail={setUsersDetail}
               show={show}
               priority={priority}
+              deleteTickets={deleteTickets}
             />
           </tbody>
         </table>

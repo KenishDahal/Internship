@@ -3,12 +3,19 @@ import React, { Component } from "react";
 import "./login.scss";
 import logo from "../../assets/D.png";
 import { BsEyeSlash } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Login() {
   let [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+
+  let [passwordShown, setPasswordShown] = useState(false);
+
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -48,11 +55,12 @@ function Login() {
           <div className="loginForm__page__mainArea__inputHandle">
             <label htmlFor="password">Password </label>
             <input
+              type={passwordShown ? "text" : "password"}
               name="password"
               placeholder="Password"
               onChange={handleChange}
             />
-            <div className="loginForm__page__mainArea__inputHandle--icon">
+            <div onClick={togglePassword} className="loginForm__page__mainArea__inputHandle--icon">
               <BsEyeSlash />
             </div>
           </div>
@@ -66,7 +74,8 @@ function Login() {
 
           <div className="loginForm__page__mainArea__signin">
             <div>Don’t have an account?</div>
-            <a>Signup</a>
+            
+            <Link to={"/signup"}>Signup</Link>
           </div>
         </div>
       </form>

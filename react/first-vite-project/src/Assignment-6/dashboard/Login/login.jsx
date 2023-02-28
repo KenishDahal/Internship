@@ -5,14 +5,23 @@ import logo from "../../../../public/assets/D.png";
 import { BsEyeSlash } from "react-icons/bs";
 import { Link, Navigate } from "react-router-dom";
 import useLogin from "./useLogin";
+import Input from "../../details/Input/input";
 
 function Login() {
- let [formData, setFormData] = useState({
+  let [formData, setFormData] = useState({
     email: "",
     password: "",
   });
 
-  let { usersLogin, getLogin, loggedInUser } = useLogin();
+  let [loggedInUser, setLoggedInUser] = useState(false);
+
+  let {
+    usersLogin,
+    getLogin,
+    togglePassword,
+    passwordShown,
+    setPasswordShown,
+  } = useLogin();
 
   const handleChange = (e) => {
     setFormData({
@@ -23,8 +32,19 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(formData);
-    getLogin(formData);
+    
+    getLogin();
+
+    let find = usersLogin.some(
+      (user)=> 
+      user.email === formData.email &&
+      user.password === formData.password 
+    )
+
+    if(find){
+      sessionStorage.setItem("store", [formData.email]);
+      setLoggedInUser(true);
+    }
   };
 
   return (
@@ -42,28 +62,29 @@ function Login() {
         {/* </div>   */}
         <div className="loginForm__page__mainArea">
           <div className="loginForm__page__mainArea__inputHandle">
-            <label htmlFor="email">EMAIL</label>
-            <input
-              name="email"
-              type="text"
-              placeholder="Email address"
-              onChange={handleChange}
-              value={formData.email}
-              required
-            />
+            <Input
+               type="text"
+               name="email"
+               text="Email"
+               handleChange={handleChange}
+               formData={formData.email}
+               required />
           </div>
 
           <div className="loginForm__page__mainArea__inputHandle">
             <label htmlFor="password">Password </label>
             <input
-              type="text"
+              type={passwordShown ? "text" : "password"}
               name="password"
               placeholder="Password"
               onChange={handleChange}
               value={formData.password}
               required
             />
-            <div className="loginForm__page__mainArea__inputHandle--icon">
+            <div
+              onClick={togglePassword}
+              className="loginForm__page__mainArea__inputHandle--icon"
+            >
               <BsEyeSlash />
             </div>
           </div>

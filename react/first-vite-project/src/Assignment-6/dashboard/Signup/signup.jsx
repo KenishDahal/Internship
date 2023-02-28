@@ -5,6 +5,7 @@ import logo from "../../../../public/assets/D.png";
 import { BsEyeSlash } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import useSignup from "./useSignup";
+import Input from "../../details/Input/input";
 
 function Signup() {
   let [signupFormData, setSignupFormData] = useState({
@@ -14,7 +15,13 @@ function Signup() {
     confirmPassword: "",
   });
 
-  let {usersRegistration,addRegistration} = useSignup();
+  let {
+    usersRegistration,
+    addRegistration,
+    togglePassword,
+    passwordShown,
+    setPasswordShown,
+  } = useSignup();
 
   const handleChange = (e) => {
     setSignupFormData({
@@ -27,6 +34,12 @@ function Signup() {
     e.preventDefault();
     addRegistration(signupFormData);
     console.log(signupFormData);
+    setSignupFormData({
+      fullName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
   };
 
   return (
@@ -43,34 +56,32 @@ function Signup() {
 
         <div className="form__page__mainArea">
           <div className="form__page__mainArea__inputHandle">
-            <label htmlFor="email">FULLNAME</label>
-            <input
+            <Input 
+              text="Fullname" 
+              type="text"
               name="fullName"
-              placeholder="Fullname"
-              value={signupFormData.fullName}
-              onChange={handleChange}
-            />
+              formData={signupFormData.fullName}
+              handleChange={handleChange} />
           </div>
 
           <div className="form__page__mainArea__inputHandle">
-            <label htmlFor="email">EMAIL</label>
-            <input
-              name="email"
-              type="text"
-              placeholder="Email address"
-              onChange={handleChange}
-              value={signupFormData.email}
-              required
-            />
+          <Input 
+               type="text"
+               name="email"
+               text="Email"
+               handleChange={handleChange}
+               formData={signupFormData.email}
+               required />
           </div>
 
           <div className="form__page__mainArea__inputHandle">
             <label htmlFor="password">Password </label>
             <input
               name="password"
-              type="text"
+              type={passwordShown ? "text" : "password"}
               placeholder="Password"
               onChange={handleChange}
+              onClick={togglePassword}
               value={signupFormData.password}
               required
             />
@@ -83,18 +94,23 @@ function Signup() {
             <label htmlFor="password">CONFIRM PASSWORD</label>
             <input
               name="confirmPassword"
-              type="text"
+              type={passwordShown ? "text" : "password"}
               placeholder="Confirm Password"
               onChange={handleChange}
               value={signupFormData.confirmPassword}
               required
             />
-            <div className="form__page__mainArea__inputHandle--icon">
+            <div
+              onClick={togglePassword}
+              className="form__page__mainArea__inputHandle--icon"
+            >
               <BsEyeSlash />
             </div>
           </div>
 
-          <button type="submit" onClick={handleSubmit}>Log in</button>
+          <button type="submit" onClick={handleSubmit}>
+            Signup
+          </button>
 
           <div className="form__page__mainArea__signin">
             <div>Don’t have an account?</div>

@@ -3,6 +3,12 @@
   justify-content: space-between;
   align-items: center;
   padding-inline: 30px;
+  img {
+    border-radius: 50%;
+    height: 44px;
+    width: 44px;
+    object-fit: cover;
+  }
   &--name {
     font-weight: 700;
     font-size: 24px;
@@ -22,6 +28,21 @@
     &--icon {
       display: flex;
       gap: 26px;
+      &--notification{
+        position: relative;
+      }
+      &--mark{
+        width: 6px;
+        height: 6px;
+        left: 62.5%;
+        right: 0%;
+        top: -6.25%;
+        bottom: 68.75%;
+        border-radius: 50%;
+        background: #3751FF;
+        border: 1.5px solid #F7F8FC;
+        position: absolute;
+      }
     }
     &--name {
       font-weight: 600;
@@ -30,7 +51,17 @@
       text-align: right;
       letter-spacing: 0.2px;
       color: #252733;
-    }
+      background-color: yellow;
+      animation: myanimation 10s infinite;
+      border-radius: 10%;
+  }
+  @keyframes myanimation {
+    0% {background-color: red;}
+    25%{background-color:yellow;}
+    50%{background-color:green; color: red;}
+    75%{background-color:brown; color: white;}
+    100% {background-color: red;}
+  }
   }
 }
 

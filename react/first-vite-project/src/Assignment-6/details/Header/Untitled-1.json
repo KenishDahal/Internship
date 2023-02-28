@@ -1,0 +1,131 @@
+{
+    "tickets": {
+      "_": {
+        "items": 10,
+        "data": [
+            {
+                "id": 0,
+                "Ticketdetails": "Contact Email not Linked",
+                "TicketdetailsUpdate": "Updated 1 day ago",
+                "Customername": "Tom Cruise",
+                "CustomernameDate": "on 24.05.2019",
+                "Date": "May 26, 2019",
+                "DateClock": "6:30 PM",
+                "buttonClassName": "red",
+                "buttonSituation": "HIGH",
+                "src": "https://picsum.photos/id/237/200/300"
+              },
+              {
+                "id": 1,
+                "Ticketdetails": "Adding Images to Featured Posts",
+                "TicketdetailsUpdate": "Updated 1 day ago",
+                "Customername": "Matt Damon",
+                "CustomernameDate": "on 24.05.2019",
+                "Date": "May 26, 2019",
+                "DateClock": "6:30 PM",
+                "buttonClassName": "yellow",
+                "buttonSituation": "LOW",
+                "src": "https://picsum.photos/id/238/200/300"
+              },
+              {
+                "id": 2,
+                "Ticketdetails": "When will I be charged this month?",
+                "TicketdetailsUpdate": "Updated 1 day ago",
+                "Customername": "Robert Downey",
+                "CustomernameDate": "on 24.05.2019",
+                "Date": "May 26, 2019",
+                "DateClock": "6:30 PM",
+                "buttonClassName": "red",
+                "buttonSituation": "HIGH",
+                "src": "https://picsum.photos/id/239/200/300"
+              },
+              {
+                "id": 3,
+                "Ticketdetails": "Payment not going through",
+                "TicketdetailsUpdate": "Updated 2 day ago",
+                "Customername": "Christian Bale",
+                "CustomernameDate": "on 24.05.2019",
+                "Date": "May 26, 2019",
+                "DateClock": "6:30 PM",
+                "buttonClassName": "green",
+                "buttonSituation": "NORMAL",
+                "src": "https://picsum.photos/id/240/200/300"
+              },
+              {
+                "id": 4,
+                "Ticketdetails": "Unable to add replies",
+                "TicketdetailsUpdate": "Updated 1 day ago",
+                "Customername": "Henry Cavil",
+                "CustomernameDate": "on 24.05.2019",
+                "Date": "May 26, 2019",
+                "DateClock": "6:30 PM",
+                "buttonClassName": "red",
+                "buttonSituation": "HIGH",
+                "src": "https://picsum.photos/id/241/200/300"
+              },
+              {
+                "id": 5,
+                "Ticketdetails": "Downtime since last week",
+                "TicketdetailsUpdate": "Updated 1 day ago",
+                "Customername": "Chris Evans",
+                "CustomernameDate": "on 24.05.2019",
+                "Date": "May 26, 2019",
+                "DateClock": "6:30 PM",
+                "buttonClassName": "green",
+                "buttonSituation": "Normal",
+                "src": "https://picsum.photos/id/242/200/300"
+              },
+              {
+                "id": 6,
+                "Ticketdetails": "Referral Bonus",
+                "TicketdetailsUpdate": "Updated 4 day ago",
+                "Customername": "Sam Smith",
+                "CustomernameDate": "on 24.05.2019",
+                "Date": "May 26, 2019",
+                "DateClock": "6:30 PM",
+                "buttonClassName": "red",
+                "buttonSituation": "HIGH",
+                "src": "https://picsum.photos/id/243/200/300"
+              },
+              {
+                "id": 7,
+                "Ticketdetails": "How do I change my password?",
+                "TicketdetailsUpdate": "Updated 6 day ago",
+                "Customername": "Steve Rogers",
+                "CustomernameDate": "on 24.05.2019",
+                "Date": "May 26, 2019",
+                "DateClock": "6:30 PM",
+                "buttonClassName": "green",
+                "buttonSituation": "Normal",
+                "src": "https://picsum.photos/id/244/200/300"
+              }
+        ]
+      }
+    },
+    "users": {
+      "_": {
+        "items": 25
+      },
+      "data":[{
+        "id": 1,
+        "fullName": "kenish",
+        "email": "k@gmail.com",
+        "password": "123",
+        "confirmPassword": "123"
+      },
+      {
+        "fullName": "binaya",
+        "email": "binaya@gmail.com",
+        "password": "binaya",
+        "confirmPassword": "binaya",
+        "id": 2
+      },
+      {
+        "fullName": "dev",
+        "email": "dev@gmail.com",
+        "password": "dev",
+        "confirmPassword": "dev",
+        "id": 3
+      }]
+    }
+  }

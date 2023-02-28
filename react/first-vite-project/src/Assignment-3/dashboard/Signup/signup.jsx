@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "./signup.scss";
 import logo from "../../assets/D.png";
 import { BsEyeSlash } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Signup() {
   let [signupFormData, setSignupFormData] = useState({
@@ -79,11 +80,11 @@ function Signup() {
             </div>
           </div>
 
-          <button onClick={handleSubmit}>Log in</button>
+          <button onClick={handleSubmit}>Signup</button>
 
           <div className="form__page__mainArea__signin">
-            <div>Don’t have an account?</div>
-            <a>Signup</a>
+            <div>Already have an account?</div>
+            <Link to={"/login"}>Login</Link>
           </div>
         </div>
       </form>

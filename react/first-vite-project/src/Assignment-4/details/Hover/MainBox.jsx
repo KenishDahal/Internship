@@ -30,6 +30,8 @@ const MouseUpdater = ({ c }) => {
   );
 };
 
+// This was another method that I implemented using ref..
+
 // import { useRef } from "react";
 // import MouseUpdater from "./MouseUpdater.jsx";
 

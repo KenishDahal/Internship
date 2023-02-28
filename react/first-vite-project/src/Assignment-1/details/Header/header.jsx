@@ -4,7 +4,6 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { GrNotification } from "react-icons/gr";
 import logo from "../../assets/man.png";
 import "./header.scss";
-import { list } from "../../pages/table";
 
 function Header({ show, setShow }) {
   const [notificationIsOpen, setNotificationIsOpen] = useState(false);
@@ -15,10 +14,13 @@ function Header({ show, setShow }) {
       <div className="top__header__rightSide">
         <div className="top__header__rightSide--icon">
           <AiOutlineSearch />
+          <div className="top__header__rightSide--icon--notification"> 
           <i className="icon-notification" />
+          <div className="top__header__rightSide--icon--mark"></div>
+          </div>
         </div>
         <div className="top__header__rightSide--line"></div>
-        <div className="top__header__rightSide--name">Jones Ferdinand</div>
+        <div className="top__header__rightSide--names">Jones Ferdinand</div>
 
         <div>
           <img src={logo}></img>

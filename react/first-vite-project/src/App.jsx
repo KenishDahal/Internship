@@ -1,17 +1,17 @@
 import { useState } from "react";
 import React, { Component } from "react";
-import Sidebar from "./Assignment-5/dashboard/Sidebar/sidebar";
-import Table from "./Assignment-5/pages/table.jsx";
+import Sidebar from "./Assignment-1/dashboard/sidebar";
 // import { list } from "./Assignment-1/details/ticketList";
-import { tableName } from "./Assignment-5/pages/table";
+import Table , { tableName } from "./Assignment-1/pages/table";
 import "./App.scss";
 import "./icons/style.scss";
 import "./icons/variables.scss";
-import Login from "./Assignment-5/dashboard/Login/login";
-import Signup from "./Assignment-5/dashboard/Signup/signup";
+import Login from "./Assignment-6/dashboard/Login/login";
+import Signup from "./Assignment-6/dashboard/Signup/signup";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainBox from "./Assignment-4/details/Hover/MainBox";
-import Overview from "./Assignment-6/pages/Overview/overview";
+import Overview from "./Assignment-6/dashboard/Overview/overview";
+import SingleTicket from "./Assignment-6/details/Tickets/SingleTicket/singleTicket";
 
 function App() {
   return (
@@ -24,11 +24,11 @@ function App() {
 
           <Route path="/main" element={<Sidebar />}>
             <Route index element={<Table tableName={tableName} />} />
-            <Route
-              path="/main/table"
-              element={<Table tableName={tableName} />}
-            />
-            <Route path="/main/overview" element={<Overview/>} />
+            <Route path="/main/table">
+              <Route index element={<Table tableName={tableName} />} />
+              <Route path=":id" element={<SingleTicket />} />
+            </Route>
+            <Route path="/main/overview" element={<Overview />} />
           </Route>
 
           <Route path="/login" element={<Login />} />

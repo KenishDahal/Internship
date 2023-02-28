@@ -39,6 +39,7 @@
       display: flex;
       gap: 24px;
       color: #a4a6b3;
+      text-decoration: none;   
       &:nth-child(6) {
         padding-bottom: 34px;
       }
@@ -62,12 +63,9 @@
       &--link {
         font-weight: 400;
         font-size: 16px;
-        line-height: 20px;
-        /* identical to box height */
-        text-decoration: none;
+        line-height: 20px; 
         letter-spacing: 0.2px;
         color: #a4a6b3;
-        /* sidebar / gray */
       }
     }
   }

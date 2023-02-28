@@ -1,0 +1,10 @@
+.singleTicket{
+  display: flex;
+  width: calc(100% - 255px);
+  height: 100vh;
+  flex-direction: column;
+  gap: 58px;
+  padding: 30px;
+  margin-left: 255px;
+  background-color: silver;
+}

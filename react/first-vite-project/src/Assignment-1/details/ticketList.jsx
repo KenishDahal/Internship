@@ -21,15 +21,6 @@ const Detail = ({ Ticketdetails, TicketdetailsUpdate, src, imageDisplay }) => {
 
 function DetailRow({usersDetail,setUsersDetail,show,setShow}) {
 
-  // let [deleteInfo, setdeleteInfo] = useState(list);
-  const deleteInformation = (id) => {
-    setUsersDetail(current => 
-            current.filter(ticket => {
-                return ticket.id !== id;
-            })    
-        )
-
-  };
 
   return (
     <>
@@ -65,7 +56,7 @@ function DetailRow({usersDetail,setUsersDetail,show,setShow}) {
           
           <td>
            <div className="table__info__main--body--tr__button" >
-           <button onClick={() => deleteInformation(item.id)}>Delete</button>
+           <button>Delete</button>
            </div>
           </td>
         </tr>

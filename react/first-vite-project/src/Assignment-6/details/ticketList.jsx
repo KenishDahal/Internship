@@ -1,14 +1,24 @@
 import { useState } from "react";
 import React from "react";
 import Button from "./Button/button";
-import logo from "../../../public/assets/man.png";
+import useTickets from "./Tickets/useTickets";
+import { Link } from "react-router-dom";
 
-const Detail = ({ Ticketdetails, TicketdetailsUpdate, src, imageDisplay }) => {
+// gives details in ticket list
+const Detail = ({
+  Ticketdetails,
+  TicketdetailsUpdate,
+  src,
+  imageDisplay,
+  id,
+}) => {
   return (
     <td>
       <div className="table__info__main--body--tr__td">
         <figure className={`${imageDisplay}`}>
-          <img src={src}></img>
+          <Link to={`/main/table/${id}`}>
+            <img src={src}></img>
+          </Link>
         </figure>
         <div className="table__info__main--body--tr__td--ticketDetails">
           <div className="table__info__main--body--tr__td--ticketDetails--upper">
@@ -23,27 +33,26 @@ const Detail = ({ Ticketdetails, TicketdetailsUpdate, src, imageDisplay }) => {
   );
 };
 
-function DetailRow({ usersDetail, setUsersDetail, show, priority }) {
-
-  const deleteInformation = (id) => {
-    setUsersDetail((current) =>
-      current.filter((ticket) => {
-        return ticket.id !== id;
-      })
-    );
-  };
-
+// show ticketlist table
+function DetailRow({
+  usersDetail,
+  setUsersDetail,
+  show,
+  priority,
+  deleteTickets,
+}) {
   return (
     <>
+    {/* maps over ticket details(usersDetail)  */}
       {usersDetail &&
         usersDetail
-          .filter((item) => {
+          .filter((item) => {     /**filters name from search box */
             return show.toLowerCase() === ""
               ? item
               : item.Customername.toLowerCase().includes(show);
           })
           .filter((item) => {
-            if (priority === "all") {
+            if (priority === "all") { /**filters button situation from priority */
               return true;
             } else {
               return item.buttonSituation === priority;
@@ -55,6 +64,7 @@ function DetailRow({ usersDetail, setUsersDetail, show, priority }) {
                 Ticketdetails={item.Ticketdetails}
                 TicketdetailsUpdate={item.TicketdetailsUpdate}
                 src={item.src}
+                id={item.id}
               />
               <Detail
                 Ticketdetails={item.Customername}
@@ -75,7 +85,7 @@ function DetailRow({ usersDetail, setUsersDetail, show, priority }) {
 
               <td>
                 <div className="table__info__main--body--tr__button">
-                  <button onClick={() => deleteInformation(item.id)}>
+                  <button onClick={() => deleteTickets(item.nodename)}>
                     Delete
                   </button>
                 </div>

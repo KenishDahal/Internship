@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { GrNotification } from "react-icons/gr";
@@ -15,10 +16,15 @@ function Header({ show, setShow, text }) {
 
   let { usersLogin } = useLogin();
 
+  let showName = [];
+  const navigate = useNavigate();
+
   function displaySearch() {
     setSearch(!search);
     console.log(search);
   }
+
+  let ses = [sessionStorage.getItem("store")];
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [notificationIsOpen, setNotificationIsOpen] = useState(false);
@@ -39,19 +45,12 @@ function Header({ show, setShow, text }) {
     setNotificationIsOpen(false);
   };
 
-  // const filterBySearch = (event) => {
-  //   // Access input value
-  //   let query = event.target.value;
-  //   // Create copy of item list
-  //   let updatedList = [...usersDetail];
-  //   // Include all elements which includes the search query
-  //   updatedList = updatedList.filter((item) => {
-  //     return item !== -1;
-  //   });
-  //   // Trigger render with updated values
-  //   setUsersDetail(updatedList);
-  // };
-  // let [show, setShow] = useState('');
+  const logout = (event) => {
+    event.preventDefault();
+    console.log("logout")
+    sessionStorage.clear();
+    navigate("/login")
+  };
 
   return (
     <div className="top__header">
@@ -63,7 +62,10 @@ function Header({ show, setShow, text }) {
             onChange={(e) => setShow(e.target.value)}
           />
           <AiOutlineSearch onClick={displaySearch} />
-          <i className="icon-notification" onClick={openNotification} />
+          <div className="top__header__rightSide--icon--notification">
+            <i className="icon-notification" onClick={openNotification} />
+            <div className="top__header__rightSide--icon--mark"></div>
+          </div>
           <Modal
             className="modal"
             ariaHideApp={false}
@@ -77,12 +79,23 @@ function Header({ show, setShow, text }) {
         </div>
 
         <div className="top__header__rightSide--line"></div>
-        <div className="top__header__rightSide--name">Jones Ferdinand</div>
-        <Link to="/signup" className="button">
-          <button style={{ height: "70px", width: "70px", background: "blue" }}>
-            Signup
+        <div className="top__header__rightSide--name">
+        {ses.filter((item) => {
+            for (let i = 0; i < item.length; i++) {
+              if (item[i] === "@") {
+                break;
+              } else {
+                showName.push(item[i].toUpperCase());
+              }
+            }
+          })}
+          <>Hi, {showName}</>
+        </div>
+        {/* <Link to="/signup" className="button"> */}
+          <button onClick={logout} style={{ height: "30px", width: "65px", background: "skyblue" }}>
+            Logout
           </button>
-        </Link>
+        {/* </Link> */}
         <div>
           <img src={logo} onClick={openModal}></img>
           <Modal
@@ -93,7 +106,7 @@ function Header({ show, setShow, text }) {
           >
             <form className="modal--form">
               <img src={logo}></img>
-              <div>Tom Cruise</div>
+              <div>HELLO {showName}</div>
             </form>
             <button className="modal--button" onClick={closeModal}>
               close

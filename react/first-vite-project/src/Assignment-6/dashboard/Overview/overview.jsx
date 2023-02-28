@@ -25,11 +25,8 @@ function Overview() {
             <h2>Unresolved</h2>
             <span>60</span>
           </div>
-
         </div>
-        <div className="overview__lowerLayer">
-            
-        </div>
+        <div className="overview__lowerLayer"></div>
       </div>
     </>
   );
