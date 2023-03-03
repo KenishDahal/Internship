@@ -31,6 +31,10 @@
 
             $sql = "Select * from  `student` ";
             $result =  mysqli_query($conn, $sql);
+            $convertResult = array($result);
+            $jsonData = eval($convertResult);
+            console.log($jsonData);
+            
             if ($result) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     $id = $row['id'];
