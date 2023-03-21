@@ -19,7 +19,7 @@ backgroundImage.src = "assets/background-flappy.png";
 pipeImageDown.src = "assets/pipe-2.png";
 pipeImageUp.src = "assets/pipe-1.png";
 groundImage.src = "assets/ground.png";
-birdImage.src = "assets/blackbird.png";
+birdImage.src = "assets/bluebird.png";
 gameOverImage.src = "assets/scoreBoard.png";
 tapTapImage.src = "assets/tap.jpeg";
 getReadyImage.src = "assets/getReadyImage.png";
@@ -64,7 +64,7 @@ class getReady {
   draw() {
     if (state.currentState === state.getReady) {
       // ctx.fillText("Get Ready:", canvas.width / 2 - 100, canvas.height / 2);
-      // ctx.fillStyle = "black";
+      // ctx.fillStyle = "blue";
       // ctx.font = "50px Regular";
       ctx.drawImage(
         getReadyImage,
@@ -309,7 +309,7 @@ class Bird {
     if (state.currentState == state.getReady) {
       this.x = 100;
       this.y = 100;
-      birdImage.src = "assets/blackbird.png";
+      birdImage.src = "assets/bluebird.png";
     } else {
       this.speed += this.gravity;
       this.y += this.speed;
@@ -323,9 +323,9 @@ class Bird {
     if (state.currentState === state.gameOver) {
       birdImage.src = "assets/red-bird.png";
     }
-    // black bird when game is on playing mode
+    // blue bird when game is on playing mode
     if (state.currentState === state.game) {
-      birdImage.src = "assets/blackbird.png";
+      birdImage.src = "assets/bluebird.png";
     }
   }
 }
